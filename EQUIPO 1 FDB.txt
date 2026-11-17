@@ -1,0 +1,33 @@
+// ENTIDADES FUERTES
+PERSONA				( id(PK), prNom, sgNom, apPat, apMat, fechaNacimiento )
+MEMBRESIA			( id(PK), tipo, costoMensual )
+SUCURSAL			( id(PK), nombreSucursal, calle, num, col, cp, cd )
+MAQUINA				( id(PK), modelo, marca, idSucursal(FK), num(FK) )
+CLASE				( id(PK), nombre, horario, idInstructor(FK) )
+CERTIFICACION			( id(PK), nombre )
+
+// HERENCIA ENTIDAD PERSONA
+CLIENTE				( idPersona(PK, FK), telefono, fechaRegistro, idMembresia(FK), duración, fechaAdquisicion, idReferente(FK) )
+EMPLEADO			( idPersona(PK, FK), fechaContrato, idSupervisor(FK) )
+INSTRUCTOR			( idPersona(PK, FK), telefono, correo, horario )
+RECEPCIONISTA			( idPersona(PK, FK), turno, correo, idSucursal(FK) )
+
+// ENTIDADES DEBILES
+HISTORIAL_MEDICO		( idCliente(PK, FK), id(PK), descripcion, fechaUltimaActualizacion, prNom, sgNom, apPat, apMat )
+VISITA				( idCliente(PK, FK), id(PK), fechaVisita, duracion )
+RESERVACION			( idCliente(PK, FK), id(PK), fechaReserva, horaInicio, horaFin, idGeneradora(FK), idSucursal(FK), num(FK) )
+SALA				( idSucursal(PK, FK), num(PK), estado, fechaUltimoUso )
+MANTENIMIENTO			( idMaquina(PK, FK), folio(PK), fechaMantenimiento, horaInicio, horaFin )
+PLAYLIST			( idSucursal(PK, FK), id(PK), nombre, cantidadCanciones, fechaReproduccion )
+SESION				( idClase(PK, FK), id(PK), fecha, numAsistentes )
+
+// MULTIVALUADOS
+CLIENTE_TELEFONO		( idCliente(PK, FK), telefono(PK) )
+CLASE_CLASIFICACION		( idClase(PK, FK), clasificacion(PK) )
+CERTIFICACION_CLASIFICACION	( idCertificacio(PK, FK), clasificacion(PK) )
+HISTORIAL_HOSPITAL		( idCliente(PK, FK), idHistorial(PK, FK), hospital(PK) )
+
+// RELACIONES M:N
+CLIENTE_SESION			( idCliente(PK, FK), idClase(PK, FK), id(PK, FK) )
+INSTRUCTOR_CERTIFICACION	( idInstructor(PK, FK), idCertificacion(PK, FK), validez, fechaCertificacion )
+
