@@ -2,12 +2,12 @@
 PERSONA				( id(PK), prNom, sgNom, apPat, apMat, fechaNacimiento )
 MEMBRESIA			( id(PK), tipo, costoMensual )
 SUCURSAL			( id(PK), nombreSucursal, calle, num, col, cp, cd )
-MAQUINA				( id(PK), modelo, marca, idSucursal(FK), num(FK) )
+MAQUINA				( id(PK), modelo, marca, idSucursal(FK), num(FK))
 CLASE				( id(PK), nombre, horario, idInstructor(FK) )
 CERTIFICACION			( id(PK), nombre )
 
 // HERENCIA ENTIDAD PERSONA
-CLIENTE				( idPersona(PK, FK), telefono, fechaRegistro, idMembresia(FK), duración, fechaAdquisicion, idReferente(FK) )
+CLIENTE				( idPersona(PK, FK), fechaRegistro, idMembresia(FK), duración, fechaAdquisicion, idReferente(FK) )
 EMPLEADO			( idPersona(PK, FK), fechaContrato, idSupervisor(FK) )
 INSTRUCTOR			( idPersona(PK, FK), telefono, correo, horario )
 RECEPCIONISTA			( idPersona(PK, FK), turno, correo, idSucursal(FK) )
