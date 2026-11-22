@@ -352,31 +352,52 @@ public class FormMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton_RecepcionistaActionPerformed
 
     private void jButton_HistorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_HistorialActionPerformed
-        // TODO add your handling code here:
+        FormHistorialMedico historial = new FormHistorialMedico();
+        historial.setVisible(true);
+        
+        this.dispose();
     }//GEN-LAST:event_jButton_HistorialActionPerformed
 
     private void jButton_VisitaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_VisitaActionPerformed
-        // TODO add your handling code here:
+        FormVisita visita = new FormVisita();
+        visita.setVisible(true);
+        
+        this.dispose();
     }//GEN-LAST:event_jButton_VisitaActionPerformed
 
     private void jButton_ReservacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ReservacionActionPerformed
-        // TODO add your handling code here:
+        FormReservacion reserva = new FormReservacion();
+        reserva.setVisible(true);
+        
+        this.dispose();
     }//GEN-LAST:event_jButton_ReservacionActionPerformed
 
     private void jButton_SalaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_SalaActionPerformed
-        // TODO add your handling code here:
+        FormSala sala = new FormSala();
+        sala.setVisible(true);
+        
+        this.dispose();
     }//GEN-LAST:event_jButton_SalaActionPerformed
 
     private void jButton_MttoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_MttoActionPerformed
-        // TODO add your handling code here:
+        FormMantenimiento mtto = new FormMantenimiento();
+        mtto.setVisible(true);
+        
+        this.dispose();
     }//GEN-LAST:event_jButton_MttoActionPerformed
 
     private void jButton_PlaylistActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_PlaylistActionPerformed
-        // TODO add your handling code here:
+        FormPlayList playlist = new FormPlayList();
+        playlist.setVisible(true);
+        
+        this.dispose();
     }//GEN-LAST:event_jButton_PlaylistActionPerformed
 
     private void jButton_SesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_SesionActionPerformed
-        // TODO add your handling code here:
+        FormSesion sesion = new FormSesion();
+        sesion.setVisible(true);
+        
+        this.dispose();
     }//GEN-LAST:event_jButton_SesionActionPerformed
 
     /**

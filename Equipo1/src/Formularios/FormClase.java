@@ -25,6 +25,7 @@ public class FormClase extends javax.swing.JFrame {
             m.setFont(fuenteMenu);
             m.setForeground(java.awt.Color.WHITE);
         }
+        jComboBox_IdClase.setSelectedIndex(-1);
         jComboBox_Clasi.setSelectedIndex(-1);
         jComboBox_IdInst.setSelectedIndex(-1);
         this.pack();
@@ -53,8 +54,8 @@ public class FormClase extends javax.swing.JFrame {
         jTable1 = new javax.swing.JTable();
         jPanel_Propiedades = new javax.swing.JPanel();
         jLabel_Id = new javax.swing.JLabel();
-        jTextField_Id = new javax.swing.JTextField();
-        jComboBox_Id = new javax.swing.JComboBox<>();
+        jTextField_IdClase = new javax.swing.JTextField();
+        jComboBox_IdClase = new javax.swing.JComboBox<>();
         jLabel_Nombre = new javax.swing.JLabel();
         jTextField_Nombre = new javax.swing.JTextField();
         jLabel_Horario = new javax.swing.JLabel();
@@ -132,16 +133,16 @@ public class FormClase extends javax.swing.JFrame {
 
         jLabel_Id.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
         jLabel_Id.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel_Id.setText("Identificación:");
+        jLabel_Id.setText("Id de la Clase:");
         jPanel_Propiedades.add(jLabel_Id, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, 30));
 
-        jTextField_Id.setBackground(new java.awt.Color(194, 141, 177));
-        jTextField_Id.setFont(new java.awt.Font("Arial Black", 3, 14)); // NOI18N
-        jTextField_Id.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel_Propiedades.add(jTextField_Id, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, 100, -1));
+        jTextField_IdClase.setBackground(new java.awt.Color(194, 141, 177));
+        jTextField_IdClase.setFont(new java.awt.Font("Arial Black", 3, 14)); // NOI18N
+        jTextField_IdClase.setForeground(new java.awt.Color(51, 51, 51));
+        jPanel_Propiedades.add(jTextField_IdClase, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, 100, -1));
 
-        jComboBox_Id.setBackground(new java.awt.Color(194, 141, 177));
-        jPanel_Propiedades.add(jComboBox_Id, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, 100, 31));
+        jComboBox_IdClase.setBackground(new java.awt.Color(194, 141, 177));
+        jPanel_Propiedades.add(jComboBox_IdClase, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, 100, 31));
 
         jLabel_Nombre.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
         jLabel_Nombre.setForeground(new java.awt.Color(0, 0, 0));
@@ -329,8 +330,8 @@ public class FormClase extends javax.swing.JFrame {
         jButton_Eliminar.setVisible(false);
         jButton_Mostrar.setVisible(false);
         jButton_Crear.setVisible(true);
-        jComboBox_Id.setVisible(false);
-        jTextField_Id.setVisible(true);
+        jComboBox_IdClase.setVisible(false);
+        jTextField_IdClase.setVisible(true);
     }//GEN-LAST:event_jMenuItemInsertarActionPerformed
 
     private void jMenuItemModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemModificarActionPerformed
@@ -339,8 +340,8 @@ public class FormClase extends javax.swing.JFrame {
         jButton_Eliminar.setVisible(false);
         jButton_Mostrar.setVisible(false);
         jButton_Crear.setVisible(false);
-        jTextField_Id.setVisible(false);
-        jComboBox_Id.setVisible(true);
+        jTextField_IdClase.setVisible(false);
+        jComboBox_IdClase.setVisible(true);
     }//GEN-LAST:event_jMenuItemModificarActionPerformed
 
     private void jMenuItemMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemMostrarActionPerformed
@@ -349,8 +350,8 @@ public class FormClase extends javax.swing.JFrame {
         jButton_Eliminar.setVisible(false);
         jButton_Mostrar.setVisible(true);
         jButton_Crear.setVisible(false);
-        jTextField_Id.setVisible(false);
-        jComboBox_Id.setVisible(true);
+        jTextField_IdClase.setVisible(false);
+        jComboBox_IdClase.setVisible(true);
     }//GEN-LAST:event_jMenuItemMostrarActionPerformed
 
     private void jMenuItemEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemEliminarActionPerformed
@@ -359,12 +360,12 @@ public class FormClase extends javax.swing.JFrame {
         jButton_Eliminar.setVisible(true);
         jButton_Mostrar.setVisible(false);
         jButton_Crear.setVisible(false);
-        jTextField_Id.setVisible(false);
-        jComboBox_Id.setVisible(true);
+        jTextField_IdClase.setVisible(false);
+        jComboBox_IdClase.setVisible(true);
     }//GEN-LAST:event_jMenuItemEliminarActionPerformed
 
     private void jButton_ModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ModificarActionPerformed
-        int id = Integer.parseInt(this.jComboBox_Id.getSelectedItem().toString());
+        int id = Integer.parseInt(this.jComboBox_IdClase.getSelectedItem().toString());
         String nom = jTextField_Nombre.getText();
         String clasi = jComboBox_Clasi.getSelectedItem().toString();
         String horario = jTextField_Horario.getText();
@@ -372,7 +373,7 @@ public class FormClase extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton_ModificarActionPerformed
 
     private void jButton_CrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_CrearActionPerformed
-        int id = Integer.parseInt(jTextField_Id.getText());
+        int id = Integer.parseInt(jTextField_IdClase.getText());
         String nom = jTextField_Nombre.getText();
         String clasi = jComboBox_Clasi.getSelectedItem().toString();
         String horario = jTextField_Horario.getText();
@@ -380,7 +381,7 @@ public class FormClase extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton_CrearActionPerformed
 
     private void jButton_MostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_MostrarActionPerformed
-        int id = Integer.parseInt(this.jComboBox_Id.getSelectedItem().toString());
+        int id = Integer.parseInt(this.jComboBox_IdClase.getSelectedItem().toString());
         String nom = jTextField_Nombre.getText();
         String clasi = jComboBox_Clasi.getSelectedItem().toString();
         String horario = jTextField_Horario.getText();
@@ -388,7 +389,7 @@ public class FormClase extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton_MostrarActionPerformed
 
     private void jButton_EliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_EliminarActionPerformed
-        int id = Integer.parseInt(this.jComboBox_Id.getSelectedItem().toString());
+        int id = Integer.parseInt(this.jComboBox_IdClase.getSelectedItem().toString());
         String nom = jTextField_Nombre.getText();
         String clasi = jComboBox_Clasi.getSelectedItem().toString();
         String horario = jTextField_Horario.getText();
@@ -432,7 +433,7 @@ public class FormClase extends javax.swing.JFrame {
     private javax.swing.JButton jButton_Modificar;
     private javax.swing.JButton jButton_Mostrar;
     private javax.swing.JComboBox<String> jComboBox_Clasi;
-    private javax.swing.JComboBox<String> jComboBox_Id;
+    private javax.swing.JComboBox<String> jComboBox_IdClase;
     private javax.swing.JComboBox<String> jComboBox_IdInst;
     private javax.swing.JLabel jLabel_Horario;
     private javax.swing.JLabel jLabel_Id;
@@ -457,7 +458,7 @@ public class FormClase extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField_Horario;
-    private javax.swing.JTextField jTextField_Id;
+    private javax.swing.JTextField jTextField_IdClase;
     private javax.swing.JTextField jTextField_Nombre;
     private java.awt.Menu menu1;
     private java.awt.Menu menu2;

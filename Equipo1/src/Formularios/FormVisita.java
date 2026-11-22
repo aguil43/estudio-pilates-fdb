@@ -25,6 +25,7 @@ public class FormVisita extends javax.swing.JFrame {
             m.setFont(fuenteMenu);
             m.setForeground(java.awt.Color.WHITE);
         }
+        jComboBox_IdCliente.setSelectedIndex(-1);
         jComboBox_IdVisita.setSelectedIndex(-1);
         this.pack();
         this.setLocationRelativeTo(null);
@@ -161,28 +162,28 @@ public class FormVisita extends javax.swing.JFrame {
         jButton_Crear.setForeground(new java.awt.Color(255, 255, 255));
         jButton_Crear.setText("Crear");
         jButton_Crear.addActionListener(this::jButton_CrearActionPerformed);
-        jPanel_Propiedades.add(jButton_Crear, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 10, 260, 60));
+        jPanel_Propiedades.add(jButton_Crear, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 20, 260, 60));
 
         jButton_Modificar.setBackground(new java.awt.Color(178, 158, 198));
         jButton_Modificar.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
         jButton_Modificar.setForeground(new java.awt.Color(255, 255, 255));
         jButton_Modificar.setText("Modificar");
         jButton_Modificar.addActionListener(this::jButton_ModificarActionPerformed);
-        jPanel_Propiedades.add(jButton_Modificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 10, 260, 60));
+        jPanel_Propiedades.add(jButton_Modificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 20, 260, 60));
 
         jButton_Mostrar.setBackground(new java.awt.Color(178, 158, 198));
         jButton_Mostrar.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
         jButton_Mostrar.setForeground(new java.awt.Color(255, 255, 255));
         jButton_Mostrar.setText("Mostrar");
         jButton_Mostrar.addActionListener(this::jButton_MostrarActionPerformed);
-        jPanel_Propiedades.add(jButton_Mostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 10, 260, -1));
+        jPanel_Propiedades.add(jButton_Mostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 20, 260, -1));
 
         jButton_Eliminar.setBackground(new java.awt.Color(178, 158, 198));
         jButton_Eliminar.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
         jButton_Eliminar.setForeground(new java.awt.Color(255, 255, 255));
         jButton_Eliminar.setText("Eliminar");
         jButton_Eliminar.addActionListener(this::jButton_EliminarActionPerformed);
-        jPanel_Propiedades.add(jButton_Eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 10, 260, 60));
+        jPanel_Propiedades.add(jButton_Eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 20, 260, 60));
 
         jLabel_Id1.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
         jLabel_Id1.setForeground(new java.awt.Color(0, 0, 0));
@@ -202,7 +203,7 @@ public class FormVisita extends javax.swing.JFrame {
         jTextField_Hospital.setForeground(new java.awt.Color(51, 51, 51));
         jPanel_Propiedades.add(jTextField_Hospital, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 30, 110, -1));
 
-        jPanel1.add(jPanel_Propiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 450, 1000, 100));
+        jPanel1.add(jPanel_Propiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 460, 1000, 100));
 
         jButtonSiguiente.setBackground(new java.awt.Color(215, 194, 236));
         jButtonSiguiente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Formularios/next.png"))); // NOI18N
@@ -296,7 +297,7 @@ public class FormVisita extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 589, Short.MAX_VALUE)
         );
 
         pack();
@@ -365,7 +366,7 @@ public class FormVisita extends javax.swing.JFrame {
 
     private void jButton_CrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_CrearActionPerformed
         int idCli = Integer.parseInt(this.jComboBox_IdCliente.getSelectedItem().toString());
-        int idVis = Integer.parseInt(this.jComboBox_IdVisita.getSelectedItem().toString());
+        int idVis = Integer.parseInt(this.jTextField_IdVisita.getText());
         String fechaVis = jTextField_FechaVisita.getText();
         String hospital = jTextField_Hospital.getText();
     }//GEN-LAST:event_jButton_CrearActionPerformed
@@ -399,8 +400,8 @@ public class FormVisita extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemMostrarTodoActionPerformed
 
     private void jButtonSiguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSiguienteActionPerformed
-        FormMembresia membresia = new FormMembresia();
-        membresia.setVisible(true);
+        FormReservacion reserva = new FormReservacion();
+        reserva.setVisible(true);
         
         this.dispose();
     }//GEN-LAST:event_jButtonSiguienteActionPerformed

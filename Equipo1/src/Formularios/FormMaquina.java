@@ -25,8 +25,9 @@ public class FormMaquina extends javax.swing.JFrame {
             m.setFont(fuenteMenu);
             m.setForeground(java.awt.Color.WHITE);
         }
-        jComboBox_Id.setSelectedIndex(-1);
+        jComboBox_IdMaquina.setSelectedIndex(-1);
         jComboBox_IdSucursal.setSelectedIndex(-1);
+        jComboBox_NumSala.setSelectedIndex(-1);
         this.pack();
         this.setLocationRelativeTo(null);
 
@@ -52,19 +53,19 @@ public class FormMaquina extends javax.swing.JFrame {
         jTable1 = new javax.swing.JTable();
         jPanel_Propiedades = new javax.swing.JPanel();
         jLabel_Id = new javax.swing.JLabel();
-        jTextField_Id = new javax.swing.JTextField();
-        jComboBox_Id = new javax.swing.JComboBox<>();
+        jTextField_IdMaquina = new javax.swing.JTextField();
+        jComboBox_IdMaquina = new javax.swing.JComboBox<>();
         jLabel_Modelo = new javax.swing.JLabel();
         jTextField_Modelo = new javax.swing.JTextField();
         jLabel_Marca = new javax.swing.JLabel();
         jLabel_IdSucursal = new javax.swing.JLabel();
         jLabel_numero = new javax.swing.JLabel();
-        jTextField_numero = new javax.swing.JTextField();
         jButton_Crear = new javax.swing.JButton();
         jButton_Modificar = new javax.swing.JButton();
         jButton_Mostrar = new javax.swing.JButton();
         jButton_Eliminar = new javax.swing.JButton();
         jTextField_Marca = new javax.swing.JTextField();
+        jComboBox_NumSala = new javax.swing.JComboBox<>();
         jComboBox_IdSucursal = new javax.swing.JComboBox<>();
         jButtonSiguiente = new javax.swing.JButton();
         jLabel_Titulo = new javax.swing.JLabel();
@@ -104,7 +105,7 @@ public class FormMaquina extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Identificación", "Modelo", "Marca", "Id Sucursal", "Número"
+                "Identificación", "Modelo", "Marca", "Id Sucursal", "Número de la Sala"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -127,16 +128,16 @@ public class FormMaquina extends javax.swing.JFrame {
 
         jLabel_Id.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
         jLabel_Id.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel_Id.setText("Identificación:");
+        jLabel_Id.setText("Id de la Máquina:");
         jPanel_Propiedades.add(jLabel_Id, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, 30));
 
-        jTextField_Id.setBackground(new java.awt.Color(194, 141, 177));
-        jTextField_Id.setFont(new java.awt.Font("Arial Black", 3, 14)); // NOI18N
-        jTextField_Id.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel_Propiedades.add(jTextField_Id, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, 100, -1));
+        jTextField_IdMaquina.setBackground(new java.awt.Color(194, 141, 177));
+        jTextField_IdMaquina.setFont(new java.awt.Font("Arial Black", 3, 14)); // NOI18N
+        jTextField_IdMaquina.setForeground(new java.awt.Color(51, 51, 51));
+        jPanel_Propiedades.add(jTextField_IdMaquina, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, 100, -1));
 
-        jComboBox_Id.setBackground(new java.awt.Color(194, 141, 177));
-        jPanel_Propiedades.add(jComboBox_Id, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, 100, 31));
+        jComboBox_IdMaquina.setBackground(new java.awt.Color(194, 141, 177));
+        jPanel_Propiedades.add(jComboBox_IdMaquina, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, 100, 31));
 
         jLabel_Modelo.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
         jLabel_Modelo.setForeground(new java.awt.Color(0, 0, 0));
@@ -160,13 +161,8 @@ public class FormMaquina extends javax.swing.JFrame {
 
         jLabel_numero.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
         jLabel_numero.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel_numero.setText("Número:");
-        jPanel_Propiedades.add(jLabel_numero, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 30, -1, 30));
-
-        jTextField_numero.setBackground(new java.awt.Color(194, 141, 177));
-        jTextField_numero.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
-        jTextField_numero.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel_Propiedades.add(jTextField_numero, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 30, 120, -1));
+        jLabel_numero.setText("Número de Sala:");
+        jPanel_Propiedades.add(jLabel_numero, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 30, -1, 30));
 
         jButton_Crear.setBackground(new java.awt.Color(167, 95, 144));
         jButton_Crear.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
@@ -200,6 +196,9 @@ public class FormMaquina extends javax.swing.JFrame {
         jTextField_Marca.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
         jTextField_Marca.setForeground(new java.awt.Color(51, 51, 51));
         jPanel_Propiedades.add(jTextField_Marca, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 50, 120, -1));
+
+        jComboBox_NumSala.setBackground(new java.awt.Color(194, 141, 177));
+        jPanel_Propiedades.add(jComboBox_NumSala, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 30, 100, 31));
 
         jComboBox_IdSucursal.setBackground(new java.awt.Color(194, 141, 177));
         jPanel_Propiedades.add(jComboBox_IdSucursal, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 50, 100, 31));
@@ -329,8 +328,8 @@ public class FormMaquina extends javax.swing.JFrame {
         jButton_Eliminar.setVisible(false);
         jButton_Mostrar.setVisible(false);
         jButton_Crear.setVisible(true);
-        jComboBox_Id.setVisible(false);
-        jTextField_Id.setVisible(true);
+        jComboBox_IdMaquina.setVisible(false);
+        jTextField_IdMaquina.setVisible(true);
     }//GEN-LAST:event_jMenuItemInsertarActionPerformed
 
     private void jMenuItemModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemModificarActionPerformed
@@ -339,8 +338,8 @@ public class FormMaquina extends javax.swing.JFrame {
         jButton_Eliminar.setVisible(false);
         jButton_Mostrar.setVisible(false);
         jButton_Crear.setVisible(false);
-        jTextField_Id.setVisible(false);
-        jComboBox_Id.setVisible(true);
+        jTextField_IdMaquina.setVisible(false);
+        jComboBox_IdMaquina.setVisible(true);
     }//GEN-LAST:event_jMenuItemModificarActionPerformed
 
     private void jMenuItemMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemMostrarActionPerformed
@@ -349,8 +348,8 @@ public class FormMaquina extends javax.swing.JFrame {
         jButton_Eliminar.setVisible(false);
         jButton_Mostrar.setVisible(true);
         jButton_Crear.setVisible(false);
-        jTextField_Id.setVisible(false);
-        jComboBox_Id.setVisible(true);
+        jTextField_IdMaquina.setVisible(false);
+        jComboBox_IdMaquina.setVisible(true);
     }//GEN-LAST:event_jMenuItemMostrarActionPerformed
 
     private void jMenuItemEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemEliminarActionPerformed
@@ -359,40 +358,40 @@ public class FormMaquina extends javax.swing.JFrame {
         jButton_Eliminar.setVisible(true);
         jButton_Mostrar.setVisible(false);
         jButton_Crear.setVisible(false);
-        jTextField_Id.setVisible(false);
-        jComboBox_Id.setVisible(true);
+        jTextField_IdMaquina.setVisible(false);
+        jComboBox_IdMaquina.setVisible(true);
     }//GEN-LAST:event_jMenuItemEliminarActionPerformed
 
     private void jButton_ModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ModificarActionPerformed
-        int id = Integer.parseInt(this.jComboBox_Id.getSelectedItem().toString());
+        int id = Integer.parseInt(this.jComboBox_IdMaquina.getSelectedItem().toString());
         String modelo = jTextField_Modelo.getText();
         String marca = jTextField_Marca.getText();
-        int num = Integer.parseInt(this.jTextField_numero.getText());
-        int idSuc = Integer.parseInt(this.jComboBox_IdSucursal.getSelectedItem().toString());
+        int numSala = Integer.parseInt(this.jComboBox_NumSala.getSelectedItem().toString());
+        int idSuc = Integer.parseInt(this.jComboBox_NumSala.getSelectedItem().toString());
     }//GEN-LAST:event_jButton_ModificarActionPerformed
 
     private void jButton_CrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_CrearActionPerformed
-        int id = Integer.parseInt(jTextField_Id.getText());
+        int id = Integer.parseInt(jTextField_IdMaquina.getText());
         String modelo = jTextField_Modelo.getText();
         String marca = jTextField_Marca.getText();
-        int num = Integer.parseInt(this.jTextField_numero.getText());
-        int idSuc = Integer.parseInt(this.jComboBox_IdSucursal.getSelectedItem().toString());
+        int numSala = Integer.parseInt(this.jComboBox_NumSala.getSelectedItem().toString());
+        int idSuc = Integer.parseInt(this.jComboBox_NumSala.getSelectedItem().toString());
     }//GEN-LAST:event_jButton_CrearActionPerformed
 
     private void jButton_MostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_MostrarActionPerformed
-        int id = Integer.parseInt(this.jComboBox_Id.getSelectedItem().toString());
+        int id = Integer.parseInt(this.jComboBox_IdMaquina.getSelectedItem().toString());
         String modelo = jTextField_Modelo.getText();
         String marca = jTextField_Marca.getText();
-        int num = Integer.parseInt(this.jTextField_numero.getText());
-        int idSuc = Integer.parseInt(this.jComboBox_IdSucursal.getSelectedItem().toString());
+        int numSala = Integer.parseInt(this.jComboBox_NumSala.getSelectedItem().toString());
+        int idSuc = Integer.parseInt(this.jComboBox_NumSala.getSelectedItem().toString());
     }//GEN-LAST:event_jButton_MostrarActionPerformed
 
     private void jButton_EliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_EliminarActionPerformed
-        int id = Integer.parseInt(this.jComboBox_Id.getSelectedItem().toString());
+        int id = Integer.parseInt(this.jComboBox_IdMaquina.getSelectedItem().toString());
         String modelo = jTextField_Modelo.getText();
         String marca = jTextField_Marca.getText();
-        int num = Integer.parseInt(this.jTextField_numero.getText());
-        int idSuc = Integer.parseInt(this.jComboBox_IdSucursal.getSelectedItem().toString());
+        int numSala = Integer.parseInt(this.jComboBox_NumSala.getSelectedItem().toString());
+        int idSuc = Integer.parseInt(this.jComboBox_NumSala.getSelectedItem().toString());
         
         int opc = JOptionPane.showConfirmDialog(rootPane, "¿Estás seguro que quieres eliminar este registro?");
         if (opc == 0) 
@@ -431,8 +430,9 @@ public class FormMaquina extends javax.swing.JFrame {
     private javax.swing.JButton jButton_Eliminar;
     private javax.swing.JButton jButton_Modificar;
     private javax.swing.JButton jButton_Mostrar;
-    private javax.swing.JComboBox<String> jComboBox_Id;
+    private javax.swing.JComboBox<String> jComboBox_IdMaquina;
     private javax.swing.JComboBox<String> jComboBox_IdSucursal;
+    private javax.swing.JComboBox<String> jComboBox_NumSala;
     private javax.swing.JLabel jLabel_Id;
     private javax.swing.JLabel jLabel_IdSucursal;
     private javax.swing.JLabel jLabel_Logo;
@@ -455,10 +455,9 @@ public class FormMaquina extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel_Propiedades;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField_Id;
+    private javax.swing.JTextField jTextField_IdMaquina;
     private javax.swing.JTextField jTextField_Marca;
     private javax.swing.JTextField jTextField_Modelo;
-    private javax.swing.JTextField jTextField_numero;
     private java.awt.Menu menu1;
     private java.awt.Menu menu2;
     private java.awt.MenuBar menuBar1;

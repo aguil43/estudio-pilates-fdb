@@ -138,9 +138,9 @@ public class FormPersona_Recepcionista extends javax.swing.JFrame {
         jPanel_Propiedades.add(jLabel_Id, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, 30));
 
         jComboBox_Turno.setBackground(new java.awt.Color(197, 143, 180));
-        jComboBox_Turno.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jComboBox_Turno.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 16)); // NOI18N
         jComboBox_Turno.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Matutino", "Vespertino", "Nocturno", " " }));
-        jPanel_Propiedades.add(jComboBox_Turno, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 30, 100, 31));
+        jPanel_Propiedades.add(jComboBox_Turno, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 30, 120, 31));
 
         jLabel_Telefono.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
         jLabel_Telefono.setForeground(new java.awt.Color(0, 0, 0));
@@ -172,33 +172,33 @@ public class FormPersona_Recepcionista extends javax.swing.JFrame {
         jButton_Crear.setForeground(new java.awt.Color(255, 255, 255));
         jButton_Crear.setText("Crear");
         jButton_Crear.addActionListener(this::jButton_CrearActionPerformed);
-        jPanel_Propiedades.add(jButton_Crear, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 30, 260, 60));
+        jPanel_Propiedades.add(jButton_Crear, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 20, 260, 60));
 
         jButton_Modificar.setBackground(new java.awt.Color(200, 128, 177));
         jButton_Modificar.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
         jButton_Modificar.setForeground(new java.awt.Color(255, 255, 255));
         jButton_Modificar.setText("Modificar");
         jButton_Modificar.addActionListener(this::jButton_ModificarActionPerformed);
-        jPanel_Propiedades.add(jButton_Modificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 30, 260, 60));
+        jPanel_Propiedades.add(jButton_Modificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 20, 260, 60));
 
         jButton_Mostrar.setBackground(new java.awt.Color(200, 128, 177));
         jButton_Mostrar.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
         jButton_Mostrar.setForeground(new java.awt.Color(255, 255, 255));
         jButton_Mostrar.setText("Mostrar");
         jButton_Mostrar.addActionListener(this::jButton_MostrarActionPerformed);
-        jPanel_Propiedades.add(jButton_Mostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 30, 260, -1));
+        jPanel_Propiedades.add(jButton_Mostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 20, 260, -1));
 
         jButton_Eliminar.setBackground(new java.awt.Color(200, 128, 177));
         jButton_Eliminar.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
         jButton_Eliminar.setForeground(new java.awt.Color(255, 255, 255));
         jButton_Eliminar.setText("Eliminar");
         jButton_Eliminar.addActionListener(this::jButton_EliminarActionPerformed);
-        jPanel_Propiedades.add(jButton_Eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 30, 260, 60));
+        jPanel_Propiedades.add(jButton_Eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 20, 260, 60));
 
         jComboBox_Id.setBackground(new java.awt.Color(197, 143, 180));
         jPanel_Propiedades.add(jComboBox_Id, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 30, 100, 31));
 
-        jPanel1.add(jPanel_Propiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 450, 1000, 120));
+        jPanel1.add(jPanel_Propiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 460, 1000, 120));
 
         jButtonSiguiente.setBackground(new java.awt.Color(253, 195, 253));
         jButtonSiguiente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Formularios/next.png"))); // NOI18N
@@ -292,7 +292,7 @@ public class FormPersona_Recepcionista extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 588, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 589, Short.MAX_VALUE)
         );
 
         pack();
@@ -383,8 +383,8 @@ public class FormPersona_Recepcionista extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemMostrarTodoActionPerformed
 
     private void jButtonSiguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSiguienteActionPerformed
-        FormPersona_Empleado empleado = new FormPersona_Empleado();
-        empleado.setVisible(true);
+        FormHistorialMedico historial = new FormHistorialMedico();
+        historial.setVisible(true);
         
         this.dispose();
     }//GEN-LAST:event_jButtonSiguienteActionPerformed

@@ -25,7 +25,7 @@ public class FormMembresia extends javax.swing.JFrame {
             m.setFont(fuenteMenu);
             m.setForeground(java.awt.Color.WHITE);
         }
-        jComboBox_Id.setSelectedIndex(-1);
+        jComboBox_IdMembresia.setSelectedIndex(-1);
         jComboBox_Tipo.setSelectedIndex(-1);
         this.pack();
         this.setLocationRelativeTo(null);
@@ -53,8 +53,8 @@ public class FormMembresia extends javax.swing.JFrame {
         jTable1 = new javax.swing.JTable();
         jPanel_Propiedades = new javax.swing.JPanel();
         jLabel_Id = new javax.swing.JLabel();
-        jTextField_Id = new javax.swing.JTextField();
-        jComboBox_Id = new javax.swing.JComboBox<>();
+        jTextField_IdMembresia = new javax.swing.JTextField();
+        jComboBox_IdMembresia = new javax.swing.JComboBox<>();
         jLabel_Tipo = new javax.swing.JLabel();
         jLabel_CostoMen = new javax.swing.JLabel();
         jTextField_CostoMen = new javax.swing.JTextField();
@@ -128,16 +128,16 @@ public class FormMembresia extends javax.swing.JFrame {
 
         jLabel_Id.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
         jLabel_Id.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel_Id.setText("Identificación:");
+        jLabel_Id.setText("Id Membresia:");
         jPanel_Propiedades.add(jLabel_Id, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, 30));
 
-        jTextField_Id.setBackground(new java.awt.Color(194, 141, 177));
-        jTextField_Id.setFont(new java.awt.Font("Arial Black", 3, 14)); // NOI18N
-        jTextField_Id.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel_Propiedades.add(jTextField_Id, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 30, 100, -1));
+        jTextField_IdMembresia.setBackground(new java.awt.Color(194, 141, 177));
+        jTextField_IdMembresia.setFont(new java.awt.Font("Arial Black", 3, 14)); // NOI18N
+        jTextField_IdMembresia.setForeground(new java.awt.Color(51, 51, 51));
+        jPanel_Propiedades.add(jTextField_IdMembresia, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 30, 100, -1));
 
-        jComboBox_Id.setBackground(new java.awt.Color(194, 141, 177));
-        jPanel_Propiedades.add(jComboBox_Id, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 30, 100, 31));
+        jComboBox_IdMembresia.setBackground(new java.awt.Color(194, 141, 177));
+        jPanel_Propiedades.add(jComboBox_IdMembresia, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 30, 100, 31));
 
         jLabel_Tipo.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
         jLabel_Tipo.setForeground(new java.awt.Color(0, 0, 0));
@@ -308,8 +308,8 @@ public class FormMembresia extends javax.swing.JFrame {
         jButton_Eliminar.setVisible(false);
         jButton_Mostrar.setVisible(false);
         jButton_Crear.setVisible(true);
-        jComboBox_Id.setVisible(false);
-        jTextField_Id.setVisible(true);
+        jComboBox_IdMembresia.setVisible(false);
+        jTextField_IdMembresia.setVisible(true);
     }//GEN-LAST:event_jMenuItemInsertarActionPerformed
 
     private void jMenuItemModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemModificarActionPerformed
@@ -318,8 +318,8 @@ public class FormMembresia extends javax.swing.JFrame {
         jButton_Eliminar.setVisible(false);
         jButton_Mostrar.setVisible(false);
         jButton_Crear.setVisible(false);
-        jTextField_Id.setVisible(false);
-        jComboBox_Id.setVisible(true);
+        jTextField_IdMembresia.setVisible(false);
+        jComboBox_IdMembresia.setVisible(true);
     }//GEN-LAST:event_jMenuItemModificarActionPerformed
 
     private void jMenuItemMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemMostrarActionPerformed
@@ -328,8 +328,8 @@ public class FormMembresia extends javax.swing.JFrame {
         jButton_Eliminar.setVisible(false);
         jButton_Mostrar.setVisible(true);
         jButton_Crear.setVisible(false);
-        jTextField_Id.setVisible(false);
-        jComboBox_Id.setVisible(true);
+        jTextField_IdMembresia.setVisible(false);
+        jComboBox_IdMembresia.setVisible(true);
     }//GEN-LAST:event_jMenuItemMostrarActionPerformed
 
     private void jMenuItemEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemEliminarActionPerformed
@@ -338,30 +338,30 @@ public class FormMembresia extends javax.swing.JFrame {
         jButton_Eliminar.setVisible(true);
         jButton_Mostrar.setVisible(false);
         jButton_Crear.setVisible(false);
-        jTextField_Id.setVisible(false);
-        jComboBox_Id.setVisible(true);
+        jTextField_IdMembresia.setVisible(false);
+        jComboBox_IdMembresia.setVisible(true);
     }//GEN-LAST:event_jMenuItemEliminarActionPerformed
 
     private void jButton_ModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ModificarActionPerformed
-        int id = Integer.parseInt(this.jComboBox_Id.getSelectedItem().toString());
+        int id = Integer.parseInt(this.jComboBox_IdMembresia.getSelectedItem().toString());
         String tipo = this.jComboBox_Tipo.getSelectedItem().toString();
         int costo = Integer.parseInt(this.jTextField_CostoMen.getText());
     }//GEN-LAST:event_jButton_ModificarActionPerformed
 
     private void jButton_CrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_CrearActionPerformed
-        int id = Integer.parseInt(jTextField_Id.getText());
+        int id = Integer.parseInt(jTextField_IdMembresia.getText());
         String tipo = this.jComboBox_Tipo.getSelectedItem().toString();
         int costo = Integer.parseInt(this.jTextField_CostoMen.getText());
     }//GEN-LAST:event_jButton_CrearActionPerformed
 
     private void jButton_MostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_MostrarActionPerformed
-        int id = Integer.parseInt(this.jComboBox_Id.getSelectedItem().toString());
+        int id = Integer.parseInt(this.jComboBox_IdMembresia.getSelectedItem().toString());
         String tipo = this.jComboBox_Tipo.getSelectedItem().toString();
         int costo = Integer.parseInt(this.jTextField_CostoMen.getText());
     }//GEN-LAST:event_jButton_MostrarActionPerformed
 
     private void jButton_EliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_EliminarActionPerformed
-        int id = Integer.parseInt(this.jComboBox_Id.getSelectedItem().toString());
+        int id = Integer.parseInt(this.jComboBox_IdMembresia.getSelectedItem().toString());
         String tipo = this.jComboBox_Tipo.getSelectedItem().toString();
         int costo = Integer.parseInt(this.jTextField_CostoMen.getText());
         
@@ -402,7 +402,7 @@ public class FormMembresia extends javax.swing.JFrame {
     private javax.swing.JButton jButton_Eliminar;
     private javax.swing.JButton jButton_Modificar;
     private javax.swing.JButton jButton_Mostrar;
-    private javax.swing.JComboBox<String> jComboBox_Id;
+    private javax.swing.JComboBox<String> jComboBox_IdMembresia;
     private javax.swing.JComboBox<String> jComboBox_Tipo;
     private javax.swing.JLabel jLabel_CostoMen;
     private javax.swing.JLabel jLabel_Id;
@@ -425,7 +425,7 @@ public class FormMembresia extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField_CostoMen;
-    private javax.swing.JTextField jTextField_Id;
+    private javax.swing.JTextField jTextField_IdMembresia;
     private java.awt.Menu menu1;
     private java.awt.Menu menu2;
     private java.awt.MenuBar menuBar1;
