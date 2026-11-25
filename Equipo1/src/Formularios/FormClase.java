@@ -58,16 +58,16 @@ public class FormClase extends javax.swing.JFrame {
         jComboBox_IdClase = new javax.swing.JComboBox<>();
         jLabel_Nombre = new javax.swing.JLabel();
         jTextField_Nombre = new javax.swing.JTextField();
+        jLabel_IdInstructor = new javax.swing.JLabel();
+        jComboBox_IdInst = new javax.swing.JComboBox<>();
         jLabel_Horario = new javax.swing.JLabel();
         jTextField_Horario = new javax.swing.JTextField();
+        jLabel_Clasi = new javax.swing.JLabel();
+        jComboBox_Clasi = new javax.swing.JComboBox<>();
         jButton_Crear = new javax.swing.JButton();
         jButton_Modificar = new javax.swing.JButton();
         jButton_Mostrar = new javax.swing.JButton();
         jButton_Eliminar = new javax.swing.JButton();
-        jLabel_IdInstructor = new javax.swing.JLabel();
-        jComboBox_IdInst = new javax.swing.JComboBox<>();
-        jLabel_Nombre1 = new javax.swing.JLabel();
-        jComboBox_Clasi = new javax.swing.JComboBox<>();
         jButtonSiguiente = new javax.swing.JButton();
         jMenuBar = new javax.swing.JMenuBar();
         jMenuInicio = new javax.swing.JMenu();
@@ -152,7 +152,15 @@ public class FormClase extends javax.swing.JFrame {
         jTextField_Nombre.setBackground(new java.awt.Color(194, 141, 177));
         jTextField_Nombre.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
         jTextField_Nombre.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel_Propiedades.add(jTextField_Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 10, 140, -1));
+        jPanel_Propiedades.add(jTextField_Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 10, 150, -1));
+
+        jLabel_IdInstructor.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
+        jLabel_IdInstructor.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel_IdInstructor.setText("Id del Instructor:");
+        jPanel_Propiedades.add(jLabel_IdInstructor, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, -1, 30));
+
+        jComboBox_IdInst.setBackground(new java.awt.Color(194, 141, 177));
+        jPanel_Propiedades.add(jComboBox_IdInst, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 50, 100, 31));
 
         jLabel_Horario.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
         jLabel_Horario.setForeground(new java.awt.Color(0, 0, 0));
@@ -163,6 +171,16 @@ public class FormClase extends javax.swing.JFrame {
         jTextField_Horario.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
         jTextField_Horario.setForeground(new java.awt.Color(51, 51, 51));
         jPanel_Propiedades.add(jTextField_Horario, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 30, 120, -1));
+
+        jLabel_Clasi.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
+        jLabel_Clasi.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel_Clasi.setText("Clasificación:");
+        jPanel_Propiedades.add(jLabel_Clasi, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 50, 100, 30));
+
+        jComboBox_Clasi.setBackground(new java.awt.Color(194, 141, 177));
+        jComboBox_Clasi.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 16)); // NOI18N
+        jComboBox_Clasi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Principiantes", "Intermedios", "Expertos", " " }));
+        jPanel_Propiedades.add(jComboBox_Clasi, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 50, 150, 31));
 
         jButton_Crear.setBackground(new java.awt.Color(167, 95, 144));
         jButton_Crear.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
@@ -191,24 +209,6 @@ public class FormClase extends javax.swing.JFrame {
         jButton_Eliminar.setText("Eliminar");
         jButton_Eliminar.addActionListener(this::jButton_EliminarActionPerformed);
         jPanel_Propiedades.add(jButton_Eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 10, 260, 60));
-
-        jLabel_IdInstructor.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
-        jLabel_IdInstructor.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel_IdInstructor.setText("Id del Instructor:");
-        jPanel_Propiedades.add(jLabel_IdInstructor, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, -1, 30));
-
-        jComboBox_IdInst.setBackground(new java.awt.Color(194, 141, 177));
-        jPanel_Propiedades.add(jComboBox_IdInst, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 50, 100, 31));
-
-        jLabel_Nombre1.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
-        jLabel_Nombre1.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel_Nombre1.setText("Clasificación:");
-        jPanel_Propiedades.add(jLabel_Nombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 50, 100, 30));
-
-        jComboBox_Clasi.setBackground(new java.awt.Color(194, 141, 177));
-        jComboBox_Clasi.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 16)); // NOI18N
-        jComboBox_Clasi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Principiantes", "Intermedios", "Expertos", " " }));
-        jPanel_Propiedades.add(jComboBox_Clasi, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 50, 150, 31));
 
         jPanel1.add(jPanel_Propiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 470, 1000, 90));
 
@@ -435,12 +435,12 @@ public class FormClase extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox_Clasi;
     private javax.swing.JComboBox<String> jComboBox_IdClase;
     private javax.swing.JComboBox<String> jComboBox_IdInst;
+    private javax.swing.JLabel jLabel_Clasi;
     private javax.swing.JLabel jLabel_Horario;
     private javax.swing.JLabel jLabel_Id;
     private javax.swing.JLabel jLabel_IdInstructor;
     private javax.swing.JLabel jLabel_Logo;
     private javax.swing.JLabel jLabel_Nombre;
-    private javax.swing.JLabel jLabel_Nombre1;
     private javax.swing.JLabel jLabel_Titulo;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar;

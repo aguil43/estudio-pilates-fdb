@@ -52,21 +52,19 @@ public class FormPlayList extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jPanel_Propiedades = new javax.swing.JPanel();
+        jLabel_IdSuc = new javax.swing.JLabel();
+        jComboBox_IdSucursal = new javax.swing.JComboBox<>();
         jLabel_IdPlaylist = new javax.swing.JLabel();
         jComboBox_IdPlayList = new javax.swing.JComboBox<>();
+        jTextField_IdPlayList = new javax.swing.JTextField();
+        jLabel_Nombre = new javax.swing.JLabel();
+        jTextField_Nombre = new javax.swing.JTextField();
         jLabel_FechaRep = new javax.swing.JLabel();
         jTextField_FechaRep = new javax.swing.JTextField();
-        jButton_Crear = new javax.swing.JButton();
-        jButton_Modificar = new javax.swing.JButton();
-        jButton_Mostrar = new javax.swing.JButton();
-        jButton_Eliminar = new javax.swing.JButton();
-        jLabel_IdSuc = new javax.swing.JLabel();
-        jTextField_IdPlayList = new javax.swing.JTextField();
-        jComboBox_IdSucursal = new javax.swing.JComboBox<>();
-        jTextField_Nombre = new javax.swing.JTextField();
-        jLabel_Nombre = new javax.swing.JLabel();
-        jTextField_CantidadCanci = new javax.swing.JTextField();
         jLabel_CantidadCanci = new javax.swing.JLabel();
+        jTextField_CantidadCanci = new javax.swing.JTextField();
+        jButton_Crear = new javax.swing.JButton();
+        jButton_Mostrar = new javax.swing.JButton();
         jButtonSiguiente = new javax.swing.JButton();
         jMenuBar = new javax.swing.JMenuBar();
         jMenuInicio = new javax.swing.JMenu();
@@ -74,9 +72,7 @@ public class FormPlayList extends javax.swing.JFrame {
         jMenuItemCerrar = new javax.swing.JMenuItem();
         jMenuMetodos = new javax.swing.JMenu();
         jMenuItemInsertar = new javax.swing.JMenuItem();
-        jMenuItemModificar = new javax.swing.JMenuItem();
         jMenuItemMostrar = new javax.swing.JMenuItem();
-        jMenuItemEliminar = new javax.swing.JMenuItem();
         jMenuItemMostrarTodo = new javax.swing.JMenuItem();
 
         jMenu1.setText("jMenu1");
@@ -136,23 +132,56 @@ public class FormPlayList extends javax.swing.JFrame {
         jPanel_Propiedades.setBackground(new java.awt.Color(232, 209, 254));
         jPanel_Propiedades.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel_IdSuc.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
+        jLabel_IdSuc.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel_IdSuc.setText("Id Sucursal:");
+        jPanel_Propiedades.add(jLabel_IdSuc, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, 30));
+
+        jComboBox_IdSucursal.setBackground(new java.awt.Color(200, 188, 211));
+        jPanel_Propiedades.add(jComboBox_IdSucursal, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, 90, 31));
+
         jLabel_IdPlaylist.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
         jLabel_IdPlaylist.setForeground(new java.awt.Color(0, 0, 0));
         jLabel_IdPlaylist.setText("Id de PlayList:");
         jPanel_Propiedades.add(jLabel_IdPlaylist, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, -1, 30));
 
         jComboBox_IdPlayList.setBackground(new java.awt.Color(200, 188, 211));
-        jPanel_Propiedades.add(jComboBox_IdPlayList, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, 100, 31));
+        jPanel_Propiedades.add(jComboBox_IdPlayList, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, 90, 31));
+
+        jTextField_IdPlayList.setBackground(new java.awt.Color(200, 188, 211));
+        jTextField_IdPlayList.setFont(new java.awt.Font("Arial Black", 3, 14)); // NOI18N
+        jTextField_IdPlayList.setForeground(new java.awt.Color(51, 51, 51));
+        jPanel_Propiedades.add(jTextField_IdPlayList, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, 90, -1));
+
+        jLabel_Nombre.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
+        jLabel_Nombre.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel_Nombre.setText("Nombre de la PlayList:");
+        jPanel_Propiedades.add(jLabel_Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 10, -1, 30));
+
+        jTextField_Nombre.setBackground(new java.awt.Color(200, 188, 211));
+        jTextField_Nombre.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
+        jTextField_Nombre.setForeground(new java.awt.Color(51, 51, 51));
+        jPanel_Propiedades.add(jTextField_Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 10, 120, -1));
 
         jLabel_FechaRep.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
         jLabel_FechaRep.setForeground(new java.awt.Color(0, 0, 0));
         jLabel_FechaRep.setText("Fecha de Reproducción:");
-        jPanel_Propiedades.add(jLabel_FechaRep, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 50, -1, 30));
+        jPanel_Propiedades.add(jLabel_FechaRep, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 50, -1, 30));
 
         jTextField_FechaRep.setBackground(new java.awt.Color(200, 188, 211));
         jTextField_FechaRep.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
         jTextField_FechaRep.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel_Propiedades.add(jTextField_FechaRep, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 50, 120, -1));
+        jPanel_Propiedades.add(jTextField_FechaRep, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 50, 120, -1));
+
+        jLabel_CantidadCanci.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
+        jLabel_CantidadCanci.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel_CantidadCanci.setText("Cantidad de canciones:");
+        jPanel_Propiedades.add(jLabel_CantidadCanci, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 30, -1, 30));
+
+        jTextField_CantidadCanci.setBackground(new java.awt.Color(200, 188, 211));
+        jTextField_CantidadCanci.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
+        jTextField_CantidadCanci.setForeground(new java.awt.Color(51, 51, 51));
+        jPanel_Propiedades.add(jTextField_CantidadCanci, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 30, 60, -1));
 
         jButton_Crear.setBackground(new java.awt.Color(178, 158, 198));
         jButton_Crear.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
@@ -161,59 +190,12 @@ public class FormPlayList extends javax.swing.JFrame {
         jButton_Crear.addActionListener(this::jButton_CrearActionPerformed);
         jPanel_Propiedades.add(jButton_Crear, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 10, 260, 60));
 
-        jButton_Modificar.setBackground(new java.awt.Color(178, 158, 198));
-        jButton_Modificar.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
-        jButton_Modificar.setForeground(new java.awt.Color(255, 255, 255));
-        jButton_Modificar.setText("Modificar");
-        jButton_Modificar.addActionListener(this::jButton_ModificarActionPerformed);
-        jPanel_Propiedades.add(jButton_Modificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 10, 260, 60));
-
         jButton_Mostrar.setBackground(new java.awt.Color(178, 158, 198));
         jButton_Mostrar.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
         jButton_Mostrar.setForeground(new java.awt.Color(255, 255, 255));
         jButton_Mostrar.setText("Mostrar");
         jButton_Mostrar.addActionListener(this::jButton_MostrarActionPerformed);
         jPanel_Propiedades.add(jButton_Mostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 10, 260, -1));
-
-        jButton_Eliminar.setBackground(new java.awt.Color(178, 158, 198));
-        jButton_Eliminar.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
-        jButton_Eliminar.setForeground(new java.awt.Color(255, 255, 255));
-        jButton_Eliminar.setText("Eliminar");
-        jButton_Eliminar.addActionListener(this::jButton_EliminarActionPerformed);
-        jPanel_Propiedades.add(jButton_Eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 10, 260, 60));
-
-        jLabel_IdSuc.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
-        jLabel_IdSuc.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel_IdSuc.setText("Id Sucursal:");
-        jPanel_Propiedades.add(jLabel_IdSuc, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, 30));
-
-        jTextField_IdPlayList.setBackground(new java.awt.Color(200, 188, 211));
-        jTextField_IdPlayList.setFont(new java.awt.Font("Arial Black", 3, 14)); // NOI18N
-        jTextField_IdPlayList.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel_Propiedades.add(jTextField_IdPlayList, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, 100, -1));
-
-        jComboBox_IdSucursal.setBackground(new java.awt.Color(200, 188, 211));
-        jPanel_Propiedades.add(jComboBox_IdSucursal, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, 100, 31));
-
-        jTextField_Nombre.setBackground(new java.awt.Color(200, 188, 211));
-        jTextField_Nombre.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
-        jTextField_Nombre.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel_Propiedades.add(jTextField_Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 10, 120, -1));
-
-        jLabel_Nombre.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
-        jLabel_Nombre.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel_Nombre.setText("Nombre de la PlayList:");
-        jPanel_Propiedades.add(jLabel_Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 10, -1, 30));
-
-        jTextField_CantidadCanci.setBackground(new java.awt.Color(200, 188, 211));
-        jTextField_CantidadCanci.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
-        jTextField_CantidadCanci.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel_Propiedades.add(jTextField_CantidadCanci, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 30, 60, -1));
-
-        jLabel_CantidadCanci.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
-        jLabel_CantidadCanci.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel_CantidadCanci.setText("Cantidad de canciones:");
-        jPanel_Propiedades.add(jLabel_CantidadCanci, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 30, -1, 30));
 
         jPanel1.add(jPanel_Propiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 470, 1000, 100));
 
@@ -261,15 +243,6 @@ public class FormPlayList extends javax.swing.JFrame {
         jMenuItemInsertar.addActionListener(this::jMenuItemInsertarActionPerformed);
         jMenuMetodos.add(jMenuItemInsertar);
 
-        jMenuItemModificar.setBackground(new java.awt.Color(210, 193, 227));
-        jMenuItemModificar.setFont(new java.awt.Font("Pristina", 1, 18)); // NOI18N
-        jMenuItemModificar.setForeground(new java.awt.Color(255, 255, 255));
-        jMenuItemModificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Formularios/4.png"))); // NOI18N
-        jMenuItemModificar.setText("Modificar");
-        jMenuItemModificar.setOpaque(true);
-        jMenuItemModificar.addActionListener(this::jMenuItemModificarActionPerformed);
-        jMenuMetodos.add(jMenuItemModificar);
-
         jMenuItemMostrar.setBackground(new java.awt.Color(210, 193, 227));
         jMenuItemMostrar.setFont(new java.awt.Font("Pristina", 1, 18)); // NOI18N
         jMenuItemMostrar.setForeground(new java.awt.Color(255, 255, 255));
@@ -278,15 +251,6 @@ public class FormPlayList extends javax.swing.JFrame {
         jMenuItemMostrar.setOpaque(true);
         jMenuItemMostrar.addActionListener(this::jMenuItemMostrarActionPerformed);
         jMenuMetodos.add(jMenuItemMostrar);
-
-        jMenuItemEliminar.setBackground(new java.awt.Color(210, 193, 227));
-        jMenuItemEliminar.setFont(new java.awt.Font("Pristina", 1, 18)); // NOI18N
-        jMenuItemEliminar.setForeground(new java.awt.Color(255, 255, 255));
-        jMenuItemEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Formularios/6.png"))); // NOI18N
-        jMenuItemEliminar.setText("Eliminar");
-        jMenuItemEliminar.setOpaque(true);
-        jMenuItemEliminar.addActionListener(this::jMenuItemEliminarActionPerformed);
-        jMenuMetodos.add(jMenuItemEliminar);
 
         jMenuItemMostrarTodo.setBackground(new java.awt.Color(210, 193, 227));
         jMenuItemMostrarTodo.setFont(new java.awt.Font("Pristina", 1, 18)); // NOI18N
@@ -331,51 +295,19 @@ public class FormPlayList extends javax.swing.JFrame {
 
     private void jMenuItemInsertarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemInsertarActionPerformed
         jPanel_Propiedades.setVisible(true);
-        jButton_Modificar.setVisible(false);
-        jButton_Eliminar.setVisible(false);
         jButton_Mostrar.setVisible(false);
         jButton_Crear.setVisible(true);
         jComboBox_IdPlayList.setVisible(false);
         jTextField_IdPlayList.setVisible(true);
     }//GEN-LAST:event_jMenuItemInsertarActionPerformed
 
-    private void jMenuItemModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemModificarActionPerformed
-        jPanel_Propiedades.setVisible(true);
-        jButton_Modificar.setVisible(true);
-        jButton_Eliminar.setVisible(false);
-        jButton_Mostrar.setVisible(false);
-        jButton_Crear.setVisible(false);
-        jTextField_IdPlayList.setVisible(false);
-        jComboBox_IdPlayList.setVisible(true);
-    }//GEN-LAST:event_jMenuItemModificarActionPerformed
-
     private void jMenuItemMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemMostrarActionPerformed
         jPanel_Propiedades.setVisible(true);
-        jButton_Modificar.setVisible(false);
-        jButton_Eliminar.setVisible(false);
         jButton_Mostrar.setVisible(true);
         jButton_Crear.setVisible(false);
         jTextField_IdPlayList.setVisible(false);
         jComboBox_IdPlayList.setVisible(true);
     }//GEN-LAST:event_jMenuItemMostrarActionPerformed
-
-    private void jMenuItemEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemEliminarActionPerformed
-        jPanel_Propiedades.setVisible(true);
-        jButton_Modificar.setVisible(false);
-        jButton_Eliminar.setVisible(true);
-        jButton_Mostrar.setVisible(false);
-        jButton_Crear.setVisible(false);
-        jTextField_IdPlayList.setVisible(false);
-        jComboBox_IdPlayList.setVisible(true);
-    }//GEN-LAST:event_jMenuItemEliminarActionPerformed
-
-    private void jButton_ModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ModificarActionPerformed
-        int idSuc = Integer.parseInt(this.jComboBox_IdSucursal.getSelectedItem().toString());
-        int idPlaylist = Integer.parseInt(this.jComboBox_IdPlayList.getSelectedItem().toString());
-        String fechaRep = jTextField_FechaRep.getText();
-        String nombre = jTextField_Nombre.getText();
-        int cantCanciones = Integer.parseInt(jTextField_CantidadCanci.getText());
-    }//GEN-LAST:event_jButton_ModificarActionPerformed
 
     private void jButton_CrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_CrearActionPerformed
         int idSuc = Integer.parseInt(this.jComboBox_IdSucursal.getSelectedItem().toString());
@@ -392,24 +324,6 @@ public class FormPlayList extends javax.swing.JFrame {
         String nombre = jTextField_Nombre.getText();
         int cantCanciones = Integer.parseInt(jTextField_CantidadCanci.getText());
     }//GEN-LAST:event_jButton_MostrarActionPerformed
-
-    private void jButton_EliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_EliminarActionPerformed
-        int idSuc = Integer.parseInt(this.jComboBox_IdSucursal.getSelectedItem().toString());
-        int idPlaylist = Integer.parseInt(this.jComboBox_IdPlayList.getSelectedItem().toString());
-        String fechaRep = jTextField_FechaRep.getText();
-        String nombre = jTextField_Nombre.getText();
-        int cantCanciones = Integer.parseInt(jTextField_CantidadCanci.getText());
-        
-        int opc = JOptionPane.showConfirmDialog(rootPane, "¿Estás seguro que quieres eliminar este registro?");
-        if (opc == 0) 
-        {
-            int op = JOptionPane.showConfirmDialog(rootPane, "¿De verdad estás seguro de querer eliminar el registro?");
-            if(op == 0)
-            {
-                //Eliminar
-            }
-        }
-    }//GEN-LAST:event_jButton_EliminarActionPerformed
 
     private void jMenuItemMostrarTodoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemMostrarTodoActionPerformed
         jPanel_Propiedades.setVisible(false);
@@ -434,8 +348,6 @@ public class FormPlayList extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonSiguiente;
     private javax.swing.JButton jButton_Crear;
-    private javax.swing.JButton jButton_Eliminar;
-    private javax.swing.JButton jButton_Modificar;
     private javax.swing.JButton jButton_Mostrar;
     private javax.swing.JComboBox<String> jComboBox_IdPlayList;
     private javax.swing.JComboBox<String> jComboBox_IdSucursal;
@@ -450,9 +362,7 @@ public class FormPlayList extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar;
     private javax.swing.JMenu jMenuInicio;
     private javax.swing.JMenuItem jMenuItemCerrar;
-    private javax.swing.JMenuItem jMenuItemEliminar;
     private javax.swing.JMenuItem jMenuItemInsertar;
-    private javax.swing.JMenuItem jMenuItemModificar;
     private javax.swing.JMenuItem jMenuItemMostrar;
     private javax.swing.JMenuItem jMenuItemMostrarTodo;
     private javax.swing.JMenuItem jMenuItemRegresar;

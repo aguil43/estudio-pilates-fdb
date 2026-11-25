@@ -55,16 +55,20 @@ public class FormCertificacion extends javax.swing.JFrame {
         jLabel_Id = new javax.swing.JLabel();
         jTextField_IdCerti = new javax.swing.JTextField();
         jComboBox_IdCerti = new javax.swing.JComboBox<>();
-        jLabel_Clasi = new javax.swing.JLabel();
+        jLabel_Nombre = new javax.swing.JLabel();
         jTextField_Nombre = new javax.swing.JTextField();
+        jLabel_Clasi = new javax.swing.JLabel();
+        jTextField_Clasi = new javax.swing.JTextField();
+        jLabel_IdInstructor = new javax.swing.JLabel();
+        jComboBox_IdInst = new javax.swing.JComboBox<>();
+        jLabel_Validez = new javax.swing.JLabel();
+        jTextField_Validez = new javax.swing.JTextField();
+        jLabel_FechaCertficado = new javax.swing.JLabel();
+        jTextField_FechaCertificacion = new javax.swing.JTextField();
         jButton_Crear = new javax.swing.JButton();
         jButton_Modificar = new javax.swing.JButton();
         jButton_Mostrar = new javax.swing.JButton();
         jButton_Eliminar = new javax.swing.JButton();
-        jLabel_Nombre = new javax.swing.JLabel();
-        jTextField_Clasi = new javax.swing.JTextField();
-        jLabel_IdInstructor = new javax.swing.JLabel();
-        jComboBox_IdInst = new javax.swing.JComboBox<>();
         jButtonSiguiente = new javax.swing.JButton();
         jMenuBar = new javax.swing.JMenuBar();
         jMenuInicio = new javax.swing.JMenu();
@@ -141,15 +145,53 @@ public class FormCertificacion extends javax.swing.JFrame {
         jComboBox_IdCerti.setBackground(new java.awt.Color(194, 141, 177));
         jPanel_Propiedades.add(jComboBox_IdCerti, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, 100, 31));
 
-        jLabel_Clasi.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
-        jLabel_Clasi.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel_Clasi.setText("Clasificación:");
-        jPanel_Propiedades.add(jLabel_Clasi, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 30, -1, 30));
+        jLabel_Nombre.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
+        jLabel_Nombre.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel_Nombre.setText("Nombre:");
+        jPanel_Propiedades.add(jLabel_Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 10, -1, 30));
 
         jTextField_Nombre.setBackground(new java.awt.Color(194, 141, 177));
         jTextField_Nombre.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
         jTextField_Nombre.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel_Propiedades.add(jTextField_Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 30, 150, -1));
+        jPanel_Propiedades.add(jTextField_Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 10, 150, -1));
+
+        jLabel_Clasi.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
+        jLabel_Clasi.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel_Clasi.setText("Clasificación:");
+        jPanel_Propiedades.add(jLabel_Clasi, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 10, -1, 30));
+
+        jTextField_Clasi.setBackground(new java.awt.Color(194, 141, 177));
+        jTextField_Clasi.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
+        jTextField_Clasi.setForeground(new java.awt.Color(51, 51, 51));
+        jPanel_Propiedades.add(jTextField_Clasi, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 10, 150, -1));
+
+        jLabel_IdInstructor.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
+        jLabel_IdInstructor.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel_IdInstructor.setText("Id del Instructor:");
+        jPanel_Propiedades.add(jLabel_IdInstructor, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, -1, 30));
+
+        jComboBox_IdInst.setBackground(new java.awt.Color(194, 141, 177));
+        jPanel_Propiedades.add(jComboBox_IdInst, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 50, 100, 31));
+
+        jLabel_Validez.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
+        jLabel_Validez.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel_Validez.setText("Válidez:");
+        jPanel_Propiedades.add(jLabel_Validez, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 50, -1, 30));
+
+        jTextField_Validez.setBackground(new java.awt.Color(197, 143, 180));
+        jTextField_Validez.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
+        jTextField_Validez.setForeground(new java.awt.Color(51, 51, 51));
+        jPanel_Propiedades.add(jTextField_Validez, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 50, 120, -1));
+
+        jLabel_FechaCertficado.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
+        jLabel_FechaCertficado.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel_FechaCertficado.setText("Fecha de certificación:");
+        jPanel_Propiedades.add(jLabel_FechaCertficado, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 50, -1, 30));
+
+        jTextField_FechaCertificacion.setBackground(new java.awt.Color(197, 143, 180));
+        jTextField_FechaCertificacion.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
+        jTextField_FechaCertificacion.setForeground(new java.awt.Color(51, 51, 51));
+        jPanel_Propiedades.add(jTextField_FechaCertificacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 50, 110, -1));
 
         jButton_Crear.setBackground(new java.awt.Color(167, 95, 144));
         jButton_Crear.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
@@ -178,24 +220,6 @@ public class FormCertificacion extends javax.swing.JFrame {
         jButton_Eliminar.setText("Eliminar");
         jButton_Eliminar.addActionListener(this::jButton_EliminarActionPerformed);
         jPanel_Propiedades.add(jButton_Eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 10, 260, 60));
-
-        jLabel_Nombre.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
-        jLabel_Nombre.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel_Nombre.setText("Nombre:");
-        jPanel_Propiedades.add(jLabel_Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 30, -1, 30));
-
-        jTextField_Clasi.setBackground(new java.awt.Color(194, 141, 177));
-        jTextField_Clasi.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
-        jTextField_Clasi.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel_Propiedades.add(jTextField_Clasi, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 30, 150, -1));
-
-        jLabel_IdInstructor.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
-        jLabel_IdInstructor.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel_IdInstructor.setText("Id del Instructor:");
-        jPanel_Propiedades.add(jLabel_IdInstructor, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, -1, 30));
-
-        jComboBox_IdInst.setBackground(new java.awt.Color(194, 141, 177));
-        jPanel_Propiedades.add(jComboBox_IdInst, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 50, 100, 31));
 
         jPanel1.add(jPanel_Propiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 470, 1000, 90));
 
@@ -353,30 +377,38 @@ public class FormCertificacion extends javax.swing.JFrame {
 
     private void jButton_ModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ModificarActionPerformed
         int id = Integer.parseInt(this.jComboBox_IdCerti.getSelectedItem().toString());
-        String primNom = jTextField_Nombre.getText();
+        String nom = jTextField_Nombre.getText();
         String clasi = jTextField_Clasi.getText();
         int idInst= Integer.parseInt(this.jComboBox_IdInst.getSelectedItem().toString());
+        int validez = Integer.parseInt(this.jTextField_Validez.getText());
+        String fechaCerti = jTextField_FechaCertificacion.getText();
     }//GEN-LAST:event_jButton_ModificarActionPerformed
 
     private void jButton_CrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_CrearActionPerformed
         int id = Integer.parseInt(jTextField_IdCerti.getText());
-        String primNom = jTextField_Nombre.getText();
+        String nom = jTextField_Nombre.getText();
         String clasi = jTextField_Clasi.getText();
         int idInst= Integer.parseInt(this.jComboBox_IdInst.getSelectedItem().toString());
+        int validez = Integer.parseInt(this.jTextField_Validez.getText());
+        String fechaCerti = jTextField_FechaCertificacion.getText();
     }//GEN-LAST:event_jButton_CrearActionPerformed
 
     private void jButton_MostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_MostrarActionPerformed
         int id = Integer.parseInt(this.jComboBox_IdCerti.getSelectedItem().toString());
-        String primNom = jTextField_Nombre.getText();
+        String nom = jTextField_Nombre.getText();
         String clasi = jTextField_Clasi.getText();
         int idInst= Integer.parseInt(this.jComboBox_IdInst.getSelectedItem().toString());
+        int validez = Integer.parseInt(this.jTextField_Validez.getText());
+        String fechaCerti = jTextField_FechaCertificacion.getText();
     }//GEN-LAST:event_jButton_MostrarActionPerformed
 
     private void jButton_EliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_EliminarActionPerformed
         int id = Integer.parseInt(this.jComboBox_IdCerti.getSelectedItem().toString());
-        String primNom = jTextField_Nombre.getText();
+        String nom = jTextField_Nombre.getText();
         String clasi = jTextField_Clasi.getText();
         int idInst= Integer.parseInt(this.jComboBox_IdInst.getSelectedItem().toString());
+        int validez = Integer.parseInt(this.jTextField_Validez.getText());
+        String fechaCerti = jTextField_FechaCertificacion.getText();
         
         
         int opc = JOptionPane.showConfirmDialog(rootPane, "¿Estás seguro que quieres eliminar este registro?");
@@ -419,11 +451,13 @@ public class FormCertificacion extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox_IdCerti;
     private javax.swing.JComboBox<String> jComboBox_IdInst;
     private javax.swing.JLabel jLabel_Clasi;
+    private javax.swing.JLabel jLabel_FechaCertficado;
     private javax.swing.JLabel jLabel_Id;
     private javax.swing.JLabel jLabel_IdInstructor;
     private javax.swing.JLabel jLabel_Logo;
     private javax.swing.JLabel jLabel_Nombre;
     private javax.swing.JLabel jLabel_Titulo;
+    private javax.swing.JLabel jLabel_Validez;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar;
     private javax.swing.JMenu jMenuInicio;
@@ -440,8 +474,10 @@ public class FormCertificacion extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField_Clasi;
+    private javax.swing.JTextField jTextField_FechaCertificacion;
     private javax.swing.JTextField jTextField_IdCerti;
     private javax.swing.JTextField jTextField_Nombre;
+    private javax.swing.JTextField jTextField_Validez;
     private java.awt.Menu menu1;
     private java.awt.Menu menu2;
     private java.awt.MenuBar menuBar1;

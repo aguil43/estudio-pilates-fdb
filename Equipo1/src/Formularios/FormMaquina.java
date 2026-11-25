@@ -55,18 +55,18 @@ public class FormMaquina extends javax.swing.JFrame {
         jLabel_Id = new javax.swing.JLabel();
         jTextField_IdMaquina = new javax.swing.JTextField();
         jComboBox_IdMaquina = new javax.swing.JComboBox<>();
+        jLabel_IdSucursal = new javax.swing.JLabel();
+        jComboBox_IdSucursal = new javax.swing.JComboBox<>();
         jLabel_Modelo = new javax.swing.JLabel();
         jTextField_Modelo = new javax.swing.JTextField();
         jLabel_Marca = new javax.swing.JLabel();
-        jLabel_IdSucursal = new javax.swing.JLabel();
+        jTextField_Marca = new javax.swing.JTextField();
         jLabel_numero = new javax.swing.JLabel();
+        jComboBox_NumSala = new javax.swing.JComboBox<>();
         jButton_Crear = new javax.swing.JButton();
         jButton_Modificar = new javax.swing.JButton();
         jButton_Mostrar = new javax.swing.JButton();
         jButton_Eliminar = new javax.swing.JButton();
-        jTextField_Marca = new javax.swing.JTextField();
-        jComboBox_NumSala = new javax.swing.JComboBox<>();
-        jComboBox_IdSucursal = new javax.swing.JComboBox<>();
         jButtonSiguiente = new javax.swing.JButton();
         jLabel_Titulo = new javax.swing.JLabel();
         jMenuBar = new javax.swing.JMenuBar();
@@ -139,6 +139,14 @@ public class FormMaquina extends javax.swing.JFrame {
         jComboBox_IdMaquina.setBackground(new java.awt.Color(194, 141, 177));
         jPanel_Propiedades.add(jComboBox_IdMaquina, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, 100, 31));
 
+        jLabel_IdSucursal.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
+        jLabel_IdSucursal.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel_IdSucursal.setText("Id de la sucursal:");
+        jPanel_Propiedades.add(jLabel_IdSucursal, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, -1, 30));
+
+        jComboBox_IdSucursal.setBackground(new java.awt.Color(194, 141, 177));
+        jPanel_Propiedades.add(jComboBox_IdSucursal, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 50, 100, 31));
+
         jLabel_Modelo.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
         jLabel_Modelo.setForeground(new java.awt.Color(0, 0, 0));
         jLabel_Modelo.setText("Modelo:");
@@ -154,15 +162,18 @@ public class FormMaquina extends javax.swing.JFrame {
         jLabel_Marca.setText("Marca:");
         jPanel_Propiedades.add(jLabel_Marca, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 50, -1, 30));
 
-        jLabel_IdSucursal.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
-        jLabel_IdSucursal.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel_IdSucursal.setText("Id de la sucursal:");
-        jPanel_Propiedades.add(jLabel_IdSucursal, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, -1, 30));
+        jTextField_Marca.setBackground(new java.awt.Color(194, 141, 177));
+        jTextField_Marca.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
+        jTextField_Marca.setForeground(new java.awt.Color(51, 51, 51));
+        jPanel_Propiedades.add(jTextField_Marca, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 50, 120, -1));
 
         jLabel_numero.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
         jLabel_numero.setForeground(new java.awt.Color(0, 0, 0));
         jLabel_numero.setText("Número de Sala:");
         jPanel_Propiedades.add(jLabel_numero, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 30, -1, 30));
+
+        jComboBox_NumSala.setBackground(new java.awt.Color(194, 141, 177));
+        jPanel_Propiedades.add(jComboBox_NumSala, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 30, 100, 31));
 
         jButton_Crear.setBackground(new java.awt.Color(167, 95, 144));
         jButton_Crear.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
@@ -191,17 +202,6 @@ public class FormMaquina extends javax.swing.JFrame {
         jButton_Eliminar.setText("Eliminar");
         jButton_Eliminar.addActionListener(this::jButton_EliminarActionPerformed);
         jPanel_Propiedades.add(jButton_Eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 10, 260, 60));
-
-        jTextField_Marca.setBackground(new java.awt.Color(194, 141, 177));
-        jTextField_Marca.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
-        jTextField_Marca.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel_Propiedades.add(jTextField_Marca, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 50, 120, -1));
-
-        jComboBox_NumSala.setBackground(new java.awt.Color(194, 141, 177));
-        jPanel_Propiedades.add(jComboBox_NumSala, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 30, 100, 31));
-
-        jComboBox_IdSucursal.setBackground(new java.awt.Color(194, 141, 177));
-        jPanel_Propiedades.add(jComboBox_IdSucursal, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 50, 100, 31));
 
         jPanel1.add(jPanel_Propiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 470, 1000, -1));
 
@@ -367,7 +367,7 @@ public class FormMaquina extends javax.swing.JFrame {
         String modelo = jTextField_Modelo.getText();
         String marca = jTextField_Marca.getText();
         int numSala = Integer.parseInt(this.jComboBox_NumSala.getSelectedItem().toString());
-        int idSuc = Integer.parseInt(this.jComboBox_NumSala.getSelectedItem().toString());
+        int idSuc = Integer.parseInt(this.jComboBox_IdSucursal.getSelectedItem().toString());
     }//GEN-LAST:event_jButton_ModificarActionPerformed
 
     private void jButton_CrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_CrearActionPerformed
@@ -375,7 +375,7 @@ public class FormMaquina extends javax.swing.JFrame {
         String modelo = jTextField_Modelo.getText();
         String marca = jTextField_Marca.getText();
         int numSala = Integer.parseInt(this.jComboBox_NumSala.getSelectedItem().toString());
-        int idSuc = Integer.parseInt(this.jComboBox_NumSala.getSelectedItem().toString());
+        int idSuc = Integer.parseInt(this.jComboBox_IdSucursal.getSelectedItem().toString());
     }//GEN-LAST:event_jButton_CrearActionPerformed
 
     private void jButton_MostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_MostrarActionPerformed
@@ -383,7 +383,7 @@ public class FormMaquina extends javax.swing.JFrame {
         String modelo = jTextField_Modelo.getText();
         String marca = jTextField_Marca.getText();
         int numSala = Integer.parseInt(this.jComboBox_NumSala.getSelectedItem().toString());
-        int idSuc = Integer.parseInt(this.jComboBox_NumSala.getSelectedItem().toString());
+        int idSuc = Integer.parseInt(this.jComboBox_IdSucursal.getSelectedItem().toString());
     }//GEN-LAST:event_jButton_MostrarActionPerformed
 
     private void jButton_EliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_EliminarActionPerformed
@@ -391,7 +391,7 @@ public class FormMaquina extends javax.swing.JFrame {
         String modelo = jTextField_Modelo.getText();
         String marca = jTextField_Marca.getText();
         int numSala = Integer.parseInt(this.jComboBox_NumSala.getSelectedItem().toString());
-        int idSuc = Integer.parseInt(this.jComboBox_NumSala.getSelectedItem().toString());
+        int idSuc = Integer.parseInt(this.jComboBox_IdSucursal.getSelectedItem().toString());
         
         int opc = JOptionPane.showConfirmDialog(rootPane, "¿Estás seguro que quieres eliminar este registro?");
         if (opc == 0) 

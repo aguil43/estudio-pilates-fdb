@@ -52,21 +52,19 @@ public class FormMantenimiento extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jPanel_Propiedades = new javax.swing.JPanel();
-        jLabel_Id = new javax.swing.JLabel();
+        jLabel_IdMaquina = new javax.swing.JLabel();
+        jComboBox_IdMaquina = new javax.swing.JComboBox<>();
+        jLabel_Folio = new javax.swing.JLabel();
         jComboBox_Folio = new javax.swing.JComboBox<>();
-        jLabel_SegNom = new javax.swing.JLabel();
+        jTextField_Folio = new javax.swing.JTextField();
+        jLabel_HoraIni = new javax.swing.JLabel();
+        jTextField_HoraIni = new javax.swing.JTextField();
+        jLabel_HoraFin = new javax.swing.JLabel();
+        jTextField_HoraFin = new javax.swing.JTextField();
+        jLabel_FechaMtto = new javax.swing.JLabel();
         jTextField_FechaMtto = new javax.swing.JTextField();
         jButton_Crear = new javax.swing.JButton();
-        jButton_Modificar = new javax.swing.JButton();
         jButton_Mostrar = new javax.swing.JButton();
-        jButton_Eliminar = new javax.swing.JButton();
-        jLabel_Id1 = new javax.swing.JLabel();
-        jTextField_Folio = new javax.swing.JTextField();
-        jComboBox_IdMaquina = new javax.swing.JComboBox<>();
-        jTextField_HoraIni = new javax.swing.JTextField();
-        jLabel_HoraIni = new javax.swing.JLabel();
-        jTextField_HoraFin = new javax.swing.JTextField();
-        jLabel_HoraFin = new javax.swing.JLabel();
         jButtonSiguiente = new javax.swing.JButton();
         jMenuBar = new javax.swing.JMenuBar();
         jMenuInicio = new javax.swing.JMenu();
@@ -74,9 +72,7 @@ public class FormMantenimiento extends javax.swing.JFrame {
         jMenuItemCerrar = new javax.swing.JMenuItem();
         jMenuMetodos = new javax.swing.JMenu();
         jMenuItemInsertar = new javax.swing.JMenuItem();
-        jMenuItemModificar = new javax.swing.JMenuItem();
         jMenuItemMostrar = new javax.swing.JMenuItem();
-        jMenuItemEliminar = new javax.swing.JMenuItem();
         jMenuItemMostrarTodo = new javax.swing.JMenuItem();
 
         jMenu1.setText("jMenu1");
@@ -136,18 +132,51 @@ public class FormMantenimiento extends javax.swing.JFrame {
         jPanel_Propiedades.setBackground(new java.awt.Color(232, 209, 254));
         jPanel_Propiedades.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel_Id.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
-        jLabel_Id.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel_Id.setText("Folio:");
-        jPanel_Propiedades.add(jLabel_Id, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, -1, 30));
+        jLabel_IdMaquina.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
+        jLabel_IdMaquina.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel_IdMaquina.setText("Id Máquina:");
+        jPanel_Propiedades.add(jLabel_IdMaquina, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, 30));
+
+        jComboBox_IdMaquina.setBackground(new java.awt.Color(200, 188, 211));
+        jPanel_Propiedades.add(jComboBox_IdMaquina, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, 100, 31));
+
+        jLabel_Folio.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
+        jLabel_Folio.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel_Folio.setText("Folio:");
+        jPanel_Propiedades.add(jLabel_Folio, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, -1, 30));
 
         jComboBox_Folio.setBackground(new java.awt.Color(200, 188, 211));
         jPanel_Propiedades.add(jComboBox_Folio, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, 100, 31));
 
-        jLabel_SegNom.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
-        jLabel_SegNom.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel_SegNom.setText("Fecha de Mtto:");
-        jPanel_Propiedades.add(jLabel_SegNom, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 30, -1, 30));
+        jTextField_Folio.setBackground(new java.awt.Color(200, 188, 211));
+        jTextField_Folio.setFont(new java.awt.Font("Arial Black", 3, 14)); // NOI18N
+        jTextField_Folio.setForeground(new java.awt.Color(51, 51, 51));
+        jPanel_Propiedades.add(jTextField_Folio, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, 100, -1));
+
+        jLabel_HoraIni.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
+        jLabel_HoraIni.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel_HoraIni.setText("Hora de Inicio:");
+        jPanel_Propiedades.add(jLabel_HoraIni, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 10, -1, 30));
+
+        jTextField_HoraIni.setBackground(new java.awt.Color(200, 188, 211));
+        jTextField_HoraIni.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
+        jTextField_HoraIni.setForeground(new java.awt.Color(51, 51, 51));
+        jPanel_Propiedades.add(jTextField_HoraIni, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 10, 120, -1));
+
+        jLabel_HoraFin.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
+        jLabel_HoraFin.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel_HoraFin.setText("Hora de Fin:");
+        jPanel_Propiedades.add(jLabel_HoraFin, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 50, -1, 30));
+
+        jTextField_HoraFin.setBackground(new java.awt.Color(200, 188, 211));
+        jTextField_HoraFin.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
+        jTextField_HoraFin.setForeground(new java.awt.Color(51, 51, 51));
+        jPanel_Propiedades.add(jTextField_HoraFin, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 50, 120, -1));
+
+        jLabel_FechaMtto.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
+        jLabel_FechaMtto.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel_FechaMtto.setText("Fecha de Mtto:");
+        jPanel_Propiedades.add(jLabel_FechaMtto, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 30, -1, 30));
 
         jTextField_FechaMtto.setBackground(new java.awt.Color(200, 188, 211));
         jTextField_FechaMtto.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
@@ -161,59 +190,12 @@ public class FormMantenimiento extends javax.swing.JFrame {
         jButton_Crear.addActionListener(this::jButton_CrearActionPerformed);
         jPanel_Propiedades.add(jButton_Crear, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 10, 260, 60));
 
-        jButton_Modificar.setBackground(new java.awt.Color(178, 158, 198));
-        jButton_Modificar.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
-        jButton_Modificar.setForeground(new java.awt.Color(255, 255, 255));
-        jButton_Modificar.setText("Modificar");
-        jButton_Modificar.addActionListener(this::jButton_ModificarActionPerformed);
-        jPanel_Propiedades.add(jButton_Modificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 10, 260, 60));
-
         jButton_Mostrar.setBackground(new java.awt.Color(178, 158, 198));
         jButton_Mostrar.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
         jButton_Mostrar.setForeground(new java.awt.Color(255, 255, 255));
         jButton_Mostrar.setText("Mostrar");
         jButton_Mostrar.addActionListener(this::jButton_MostrarActionPerformed);
         jPanel_Propiedades.add(jButton_Mostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 10, 260, -1));
-
-        jButton_Eliminar.setBackground(new java.awt.Color(178, 158, 198));
-        jButton_Eliminar.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
-        jButton_Eliminar.setForeground(new java.awt.Color(255, 255, 255));
-        jButton_Eliminar.setText("Eliminar");
-        jButton_Eliminar.addActionListener(this::jButton_EliminarActionPerformed);
-        jPanel_Propiedades.add(jButton_Eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 10, 260, 60));
-
-        jLabel_Id1.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
-        jLabel_Id1.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel_Id1.setText("Id Máquina:");
-        jPanel_Propiedades.add(jLabel_Id1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, 30));
-
-        jTextField_Folio.setBackground(new java.awt.Color(200, 188, 211));
-        jTextField_Folio.setFont(new java.awt.Font("Arial Black", 3, 14)); // NOI18N
-        jTextField_Folio.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel_Propiedades.add(jTextField_Folio, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, 100, -1));
-
-        jComboBox_IdMaquina.setBackground(new java.awt.Color(200, 188, 211));
-        jPanel_Propiedades.add(jComboBox_IdMaquina, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, 100, 31));
-
-        jTextField_HoraIni.setBackground(new java.awt.Color(200, 188, 211));
-        jTextField_HoraIni.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
-        jTextField_HoraIni.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel_Propiedades.add(jTextField_HoraIni, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 10, 120, -1));
-
-        jLabel_HoraIni.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
-        jLabel_HoraIni.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel_HoraIni.setText("Hora de Inicio:");
-        jPanel_Propiedades.add(jLabel_HoraIni, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 10, -1, 30));
-
-        jTextField_HoraFin.setBackground(new java.awt.Color(200, 188, 211));
-        jTextField_HoraFin.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
-        jTextField_HoraFin.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel_Propiedades.add(jTextField_HoraFin, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 50, 120, -1));
-
-        jLabel_HoraFin.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
-        jLabel_HoraFin.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel_HoraFin.setText("Hora de Fin:");
-        jPanel_Propiedades.add(jLabel_HoraFin, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 50, -1, 30));
 
         jPanel1.add(jPanel_Propiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 470, 1000, 100));
 
@@ -261,15 +243,6 @@ public class FormMantenimiento extends javax.swing.JFrame {
         jMenuItemInsertar.addActionListener(this::jMenuItemInsertarActionPerformed);
         jMenuMetodos.add(jMenuItemInsertar);
 
-        jMenuItemModificar.setBackground(new java.awt.Color(210, 193, 227));
-        jMenuItemModificar.setFont(new java.awt.Font("Pristina", 1, 18)); // NOI18N
-        jMenuItemModificar.setForeground(new java.awt.Color(255, 255, 255));
-        jMenuItemModificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Formularios/4.png"))); // NOI18N
-        jMenuItemModificar.setText("Modificar");
-        jMenuItemModificar.setOpaque(true);
-        jMenuItemModificar.addActionListener(this::jMenuItemModificarActionPerformed);
-        jMenuMetodos.add(jMenuItemModificar);
-
         jMenuItemMostrar.setBackground(new java.awt.Color(210, 193, 227));
         jMenuItemMostrar.setFont(new java.awt.Font("Pristina", 1, 18)); // NOI18N
         jMenuItemMostrar.setForeground(new java.awt.Color(255, 255, 255));
@@ -278,15 +251,6 @@ public class FormMantenimiento extends javax.swing.JFrame {
         jMenuItemMostrar.setOpaque(true);
         jMenuItemMostrar.addActionListener(this::jMenuItemMostrarActionPerformed);
         jMenuMetodos.add(jMenuItemMostrar);
-
-        jMenuItemEliminar.setBackground(new java.awt.Color(210, 193, 227));
-        jMenuItemEliminar.setFont(new java.awt.Font("Pristina", 1, 18)); // NOI18N
-        jMenuItemEliminar.setForeground(new java.awt.Color(255, 255, 255));
-        jMenuItemEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Formularios/6.png"))); // NOI18N
-        jMenuItemEliminar.setText("Eliminar");
-        jMenuItemEliminar.setOpaque(true);
-        jMenuItemEliminar.addActionListener(this::jMenuItemEliminarActionPerformed);
-        jMenuMetodos.add(jMenuItemEliminar);
 
         jMenuItemMostrarTodo.setBackground(new java.awt.Color(210, 193, 227));
         jMenuItemMostrarTodo.setFont(new java.awt.Font("Pristina", 1, 18)); // NOI18N
@@ -331,51 +295,19 @@ public class FormMantenimiento extends javax.swing.JFrame {
 
     private void jMenuItemInsertarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemInsertarActionPerformed
         jPanel_Propiedades.setVisible(true);
-        jButton_Modificar.setVisible(false);
-        jButton_Eliminar.setVisible(false);
         jButton_Mostrar.setVisible(false);
         jButton_Crear.setVisible(true);
         jComboBox_Folio.setVisible(false);
         jTextField_Folio.setVisible(true);
     }//GEN-LAST:event_jMenuItemInsertarActionPerformed
 
-    private void jMenuItemModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemModificarActionPerformed
-        jPanel_Propiedades.setVisible(true);
-        jButton_Modificar.setVisible(true);
-        jButton_Eliminar.setVisible(false);
-        jButton_Mostrar.setVisible(false);
-        jButton_Crear.setVisible(false);
-        jTextField_Folio.setVisible(false);
-        jComboBox_Folio.setVisible(true);
-    }//GEN-LAST:event_jMenuItemModificarActionPerformed
-
     private void jMenuItemMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemMostrarActionPerformed
         jPanel_Propiedades.setVisible(true);
-        jButton_Modificar.setVisible(false);
-        jButton_Eliminar.setVisible(false);
         jButton_Mostrar.setVisible(true);
         jButton_Crear.setVisible(false);
         jTextField_Folio.setVisible(false);
         jComboBox_Folio.setVisible(true);
     }//GEN-LAST:event_jMenuItemMostrarActionPerformed
-
-    private void jMenuItemEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemEliminarActionPerformed
-        jPanel_Propiedades.setVisible(true);
-        jButton_Modificar.setVisible(false);
-        jButton_Eliminar.setVisible(true);
-        jButton_Mostrar.setVisible(false);
-        jButton_Crear.setVisible(false);
-        jTextField_Folio.setVisible(false);
-        jComboBox_Folio.setVisible(true);
-    }//GEN-LAST:event_jMenuItemEliminarActionPerformed
-
-    private void jButton_ModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ModificarActionPerformed
-        int idMaq = Integer.parseInt(this.jComboBox_IdMaquina.getSelectedItem().toString());
-        int folio = Integer.parseInt(this.jComboBox_Folio.getSelectedItem().toString());
-        String fechaMtto = jTextField_FechaMtto.getText();
-        String horaIni = jTextField_HoraIni.getText();
-        String horaFin = jTextField_HoraFin.getText();
-    }//GEN-LAST:event_jButton_ModificarActionPerformed
 
     private void jButton_CrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_CrearActionPerformed
         int idCli = Integer.parseInt(this.jComboBox_IdMaquina.getSelectedItem().toString());
@@ -392,24 +324,6 @@ public class FormMantenimiento extends javax.swing.JFrame {
         String horaIni = jTextField_HoraIni.getText();
         String horaFin = jTextField_HoraFin.getText();
     }//GEN-LAST:event_jButton_MostrarActionPerformed
-
-    private void jButton_EliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_EliminarActionPerformed
-        int idCli = Integer.parseInt(this.jComboBox_IdMaquina.getSelectedItem().toString());
-        int idVis = Integer.parseInt(this.jComboBox_Folio.getSelectedItem().toString());
-        String fechaMtto = jTextField_FechaMtto.getText();
-        String horaIni = jTextField_HoraIni.getText();
-        String horaFin = jTextField_HoraFin.getText();
-        
-        int opc = JOptionPane.showConfirmDialog(rootPane, "¿Estás seguro que quieres eliminar este registro?");
-        if (opc == 0) 
-        {
-            int op = JOptionPane.showConfirmDialog(rootPane, "¿De verdad estás seguro de querer eliminar el registro?");
-            if(op == 0)
-            {
-                //Eliminar
-            }
-        }
-    }//GEN-LAST:event_jButton_EliminarActionPerformed
 
     private void jMenuItemMostrarTodoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemMostrarTodoActionPerformed
         jPanel_Propiedades.setVisible(false);
@@ -434,25 +348,21 @@ public class FormMantenimiento extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonSiguiente;
     private javax.swing.JButton jButton_Crear;
-    private javax.swing.JButton jButton_Eliminar;
-    private javax.swing.JButton jButton_Modificar;
     private javax.swing.JButton jButton_Mostrar;
     private javax.swing.JComboBox<String> jComboBox_Folio;
     private javax.swing.JComboBox<String> jComboBox_IdMaquina;
+    private javax.swing.JLabel jLabel_FechaMtto;
+    private javax.swing.JLabel jLabel_Folio;
     private javax.swing.JLabel jLabel_HoraFin;
     private javax.swing.JLabel jLabel_HoraIni;
-    private javax.swing.JLabel jLabel_Id;
-    private javax.swing.JLabel jLabel_Id1;
+    private javax.swing.JLabel jLabel_IdMaquina;
     private javax.swing.JLabel jLabel_Logo;
-    private javax.swing.JLabel jLabel_SegNom;
     private javax.swing.JLabel jLabel_Titulo;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar;
     private javax.swing.JMenu jMenuInicio;
     private javax.swing.JMenuItem jMenuItemCerrar;
-    private javax.swing.JMenuItem jMenuItemEliminar;
     private javax.swing.JMenuItem jMenuItemInsertar;
-    private javax.swing.JMenuItem jMenuItemModificar;
     private javax.swing.JMenuItem jMenuItemMostrar;
     private javax.swing.JMenuItem jMenuItemMostrarTodo;
     private javax.swing.JMenuItem jMenuItemRegresar;

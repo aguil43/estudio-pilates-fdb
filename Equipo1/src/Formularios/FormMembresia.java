@@ -56,13 +56,13 @@ public class FormMembresia extends javax.swing.JFrame {
         jTextField_IdMembresia = new javax.swing.JTextField();
         jComboBox_IdMembresia = new javax.swing.JComboBox<>();
         jLabel_Tipo = new javax.swing.JLabel();
+        jComboBox_Tipo = new javax.swing.JComboBox<>();
         jLabel_CostoMen = new javax.swing.JLabel();
         jTextField_CostoMen = new javax.swing.JTextField();
         jButton_Crear = new javax.swing.JButton();
         jButton_Modificar = new javax.swing.JButton();
         jButton_Mostrar = new javax.swing.JButton();
         jButton_Eliminar = new javax.swing.JButton();
-        jComboBox_Tipo = new javax.swing.JComboBox<>();
         jButtonSiguiente = new javax.swing.JButton();
         jMenuBar = new javax.swing.JMenuBar();
         jMenuInicio = new javax.swing.JMenu();
@@ -144,6 +144,12 @@ public class FormMembresia extends javax.swing.JFrame {
         jLabel_Tipo.setText("Tipo:");
         jPanel_Propiedades.add(jLabel_Tipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 30, -1, 30));
 
+        jComboBox_Tipo.setBackground(new java.awt.Color(194, 141, 177));
+        jComboBox_Tipo.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 16)); // NOI18N
+        jComboBox_Tipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Diamond", "Premium", "Basic" }));
+        jComboBox_Tipo.setName(""); // NOI18N
+        jPanel_Propiedades.add(jComboBox_Tipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 30, -1, 31));
+
         jLabel_CostoMen.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
         jLabel_CostoMen.setForeground(new java.awt.Color(0, 0, 0));
         jLabel_CostoMen.setText("Costo mensual:");
@@ -181,12 +187,6 @@ public class FormMembresia extends javax.swing.JFrame {
         jButton_Eliminar.setText("Eliminar");
         jButton_Eliminar.addActionListener(this::jButton_EliminarActionPerformed);
         jPanel_Propiedades.add(jButton_Eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 20, 260, 60));
-
-        jComboBox_Tipo.setBackground(new java.awt.Color(194, 141, 177));
-        jComboBox_Tipo.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 16)); // NOI18N
-        jComboBox_Tipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Diamond", "Premium", "Basic" }));
-        jComboBox_Tipo.setName(""); // NOI18N
-        jPanel_Propiedades.add(jComboBox_Tipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 30, -1, 31));
 
         jPanel1.add(jPanel_Propiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 460, 990, 90));
 

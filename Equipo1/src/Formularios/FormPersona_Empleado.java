@@ -57,12 +57,12 @@ public class FormPersona_Empleado extends javax.swing.JFrame {
         jComboBox_Id = new javax.swing.JComboBox<>();
         jLabel_FechaCon = new javax.swing.JLabel();
         jTextField_FechaCont = new javax.swing.JTextField();
+        jLabel_IdSupervisor = new javax.swing.JLabel();
+        jComboBox_IdSupervisor = new javax.swing.JComboBox<>();
         jButton_Crear = new javax.swing.JButton();
         jButton_Modificar = new javax.swing.JButton();
         jButton_Mostrar = new javax.swing.JButton();
         jButton_Eliminar = new javax.swing.JButton();
-        jLabel_IdSupervisor = new javax.swing.JLabel();
-        jComboBox_IdSupervisor = new javax.swing.JComboBox<>();
         jButtonSiguiente = new javax.swing.JButton();
         jMenuBar = new javax.swing.JMenuBar();
         jMenuInicio = new javax.swing.JMenu();
@@ -144,6 +144,14 @@ public class FormPersona_Empleado extends javax.swing.JFrame {
         jTextField_FechaCont.setForeground(new java.awt.Color(51, 51, 51));
         jPanel_Propiedades.add(jTextField_FechaCont, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 50, 120, -1));
 
+        jLabel_IdSupervisor.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
+        jLabel_IdSupervisor.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel_IdSupervisor.setText("Id del Supervisor:");
+        jPanel_Propiedades.add(jLabel_IdSupervisor, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 50, -1, 30));
+
+        jComboBox_IdSupervisor.setBackground(new java.awt.Color(197, 143, 180));
+        jPanel_Propiedades.add(jComboBox_IdSupervisor, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 50, 100, 31));
+
         jButton_Crear.setBackground(new java.awt.Color(200, 128, 177));
         jButton_Crear.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
         jButton_Crear.setForeground(new java.awt.Color(255, 255, 255));
@@ -171,14 +179,6 @@ public class FormPersona_Empleado extends javax.swing.JFrame {
         jButton_Eliminar.setText("Eliminar");
         jButton_Eliminar.addActionListener(this::jButton_EliminarActionPerformed);
         jPanel_Propiedades.add(jButton_Eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 30, 260, 60));
-
-        jLabel_IdSupervisor.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
-        jLabel_IdSupervisor.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel_IdSupervisor.setText("Id del Supervisor:");
-        jPanel_Propiedades.add(jLabel_IdSupervisor, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 50, -1, 30));
-
-        jComboBox_IdSupervisor.setBackground(new java.awt.Color(197, 143, 180));
-        jPanel_Propiedades.add(jComboBox_IdSupervisor, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 50, 100, 31));
 
         jPanel1.add(jPanel_Propiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 450, 1000, 120));
 

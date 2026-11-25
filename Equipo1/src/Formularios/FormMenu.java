@@ -7,6 +7,9 @@ package Formularios;
 /**
  *
  * @author orteg
+ * DULCE MARÍA AYALA ORTEGA 25131000
+ * PEDRO ALEJANDRO GARZA AGUILAR 25130
+ * 
  */
 public class FormMenu extends javax.swing.JFrame {
     

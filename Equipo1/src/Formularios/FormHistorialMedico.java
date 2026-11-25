@@ -52,29 +52,27 @@ public class FormHistorialMedico extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jPanel_Propiedades = new javax.swing.JPanel();
-        jLabel_Id = new javax.swing.JLabel();
+        jLabel_IdCliente = new javax.swing.JLabel();
+        jComboBox_IdCliente = new javax.swing.JComboBox<>();
+        jLabel_IdHistorial = new javax.swing.JLabel();
         jComboBox_IdHistorial = new javax.swing.JComboBox<>();
+        jTextField_IdHistorial = new javax.swing.JTextField();
         jLabel_Descripcion = new javax.swing.JLabel();
         jTextField_Descripcion = new javax.swing.JTextField();
         jLabel_FechaUltAct = new javax.swing.JLabel();
         jTextField_fechaUltAct = new javax.swing.JTextField();
         jLabel_Hospital = new javax.swing.JLabel();
-        jButton_Crear = new javax.swing.JButton();
-        jButton_Modificar = new javax.swing.JButton();
-        jButton_Mostrar = new javax.swing.JButton();
-        jButton_Eliminar = new javax.swing.JButton();
-        jLabel_Id1 = new javax.swing.JLabel();
-        jTextField_IdHistorial = new javax.swing.JTextField();
-        jComboBox_IdCliente = new javax.swing.JComboBox<>();
-        jTextField_ApMat = new javax.swing.JTextField();
-        jLabel_ApMat = new javax.swing.JLabel();
-        jTextField_ApPat = new javax.swing.JTextField();
-        jLabel_ApPat = new javax.swing.JLabel();
-        jLabel_SegNom = new javax.swing.JLabel();
-        jTextField_PrimNom = new javax.swing.JTextField();
-        jTextField_SegNom = new javax.swing.JTextField();
-        jLabel_PrimNom = new javax.swing.JLabel();
         jTextField_Hospital = new javax.swing.JTextField();
+        jLabel_PrimNom = new javax.swing.JLabel();
+        jTextField_PrimNom = new javax.swing.JTextField();
+        jLabel_SegNom = new javax.swing.JLabel();
+        jTextField_SegNom = new javax.swing.JTextField();
+        jLabel_ApPat = new javax.swing.JLabel();
+        jTextField_ApPat = new javax.swing.JTextField();
+        jLabel_ApMat = new javax.swing.JLabel();
+        jTextField_ApMat = new javax.swing.JTextField();
+        jButton_Crear = new javax.swing.JButton();
+        jButton_Mostrar = new javax.swing.JButton();
         jButtonSiguiente = new javax.swing.JButton();
         jLabel_Nombre = new javax.swing.JLabel();
         jMenuBar = new javax.swing.JMenuBar();
@@ -83,9 +81,7 @@ public class FormHistorialMedico extends javax.swing.JFrame {
         jMenuItemCerrar = new javax.swing.JMenuItem();
         jMenuMetodos = new javax.swing.JMenu();
         jMenuItemInsertar = new javax.swing.JMenuItem();
-        jMenuItemModificar = new javax.swing.JMenuItem();
         jMenuItemMostrar = new javax.swing.JMenuItem();
-        jMenuItemEliminar = new javax.swing.JMenuItem();
         jMenuItemMostrarTodo = new javax.swing.JMenuItem();
 
         jMenu1.setText("jMenu1");
@@ -146,13 +142,26 @@ public class FormHistorialMedico extends javax.swing.JFrame {
         jPanel_Propiedades.setBackground(new java.awt.Color(232, 209, 254));
         jPanel_Propiedades.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel_Id.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
-        jLabel_Id.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel_Id.setText("Id Historial:");
-        jPanel_Propiedades.add(jLabel_Id, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, -1, 30));
+        jLabel_IdCliente.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
+        jLabel_IdCliente.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel_IdCliente.setText("Id Cliente:");
+        jPanel_Propiedades.add(jLabel_IdCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, 30));
+
+        jComboBox_IdCliente.setBackground(new java.awt.Color(200, 188, 211));
+        jPanel_Propiedades.add(jComboBox_IdCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, 100, 31));
+
+        jLabel_IdHistorial.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
+        jLabel_IdHistorial.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel_IdHistorial.setText("Id Historial:");
+        jPanel_Propiedades.add(jLabel_IdHistorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, -1, 30));
 
         jComboBox_IdHistorial.setBackground(new java.awt.Color(200, 188, 211));
         jPanel_Propiedades.add(jComboBox_IdHistorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, 100, 31));
+
+        jTextField_IdHistorial.setBackground(new java.awt.Color(200, 188, 211));
+        jTextField_IdHistorial.setFont(new java.awt.Font("Arial Black", 3, 14)); // NOI18N
+        jTextField_IdHistorial.setForeground(new java.awt.Color(51, 51, 51));
+        jPanel_Propiedades.add(jTextField_IdHistorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, 100, -1));
 
         jLabel_Descripcion.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
         jLabel_Descripcion.setForeground(new java.awt.Color(0, 0, 0));
@@ -179,6 +188,51 @@ public class FormHistorialMedico extends javax.swing.JFrame {
         jLabel_Hospital.setText("Hospital:");
         jPanel_Propiedades.add(jLabel_Hospital, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 50, -1, 30));
 
+        jTextField_Hospital.setBackground(new java.awt.Color(200, 188, 211));
+        jTextField_Hospital.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
+        jTextField_Hospital.setForeground(new java.awt.Color(51, 51, 51));
+        jPanel_Propiedades.add(jTextField_Hospital, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 50, 110, -1));
+
+        jLabel_PrimNom.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
+        jLabel_PrimNom.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel_PrimNom.setText("Primer Nombre:");
+        jPanel_Propiedades.add(jLabel_PrimNom, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, -1, 30));
+
+        jTextField_PrimNom.setBackground(new java.awt.Color(200, 188, 211));
+        jTextField_PrimNom.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
+        jTextField_PrimNom.setForeground(new java.awt.Color(51, 51, 51));
+        jPanel_Propiedades.add(jTextField_PrimNom, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 90, 120, 30));
+
+        jLabel_SegNom.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
+        jLabel_SegNom.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel_SegNom.setText("Segundo Nombre:");
+        jPanel_Propiedades.add(jLabel_SegNom, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 90, -1, 30));
+
+        jTextField_SegNom.setBackground(new java.awt.Color(200, 188, 211));
+        jTextField_SegNom.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
+        jTextField_SegNom.setForeground(new java.awt.Color(51, 51, 51));
+        jPanel_Propiedades.add(jTextField_SegNom, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 90, 120, -1));
+
+        jLabel_ApPat.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
+        jLabel_ApPat.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel_ApPat.setText("Apellido Paterno:");
+        jPanel_Propiedades.add(jLabel_ApPat, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 90, -1, 30));
+
+        jTextField_ApPat.setBackground(new java.awt.Color(200, 188, 211));
+        jTextField_ApPat.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
+        jTextField_ApPat.setForeground(new java.awt.Color(51, 51, 51));
+        jPanel_Propiedades.add(jTextField_ApPat, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 90, 110, 30));
+
+        jLabel_ApMat.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
+        jLabel_ApMat.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel_ApMat.setText("Apellido Materno:");
+        jPanel_Propiedades.add(jLabel_ApMat, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 90, -1, 30));
+
+        jTextField_ApMat.setBackground(new java.awt.Color(200, 188, 211));
+        jTextField_ApMat.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
+        jTextField_ApMat.setForeground(new java.awt.Color(51, 51, 51));
+        jPanel_Propiedades.add(jTextField_ApMat, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 90, 110, -1));
+
         jButton_Crear.setBackground(new java.awt.Color(178, 158, 198));
         jButton_Crear.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
         jButton_Crear.setForeground(new java.awt.Color(255, 255, 255));
@@ -186,84 +240,12 @@ public class FormHistorialMedico extends javax.swing.JFrame {
         jButton_Crear.addActionListener(this::jButton_CrearActionPerformed);
         jPanel_Propiedades.add(jButton_Crear, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 10, 260, 60));
 
-        jButton_Modificar.setBackground(new java.awt.Color(178, 158, 198));
-        jButton_Modificar.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
-        jButton_Modificar.setForeground(new java.awt.Color(255, 255, 255));
-        jButton_Modificar.setText("Modificar");
-        jButton_Modificar.addActionListener(this::jButton_ModificarActionPerformed);
-        jPanel_Propiedades.add(jButton_Modificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 10, 260, 60));
-
         jButton_Mostrar.setBackground(new java.awt.Color(178, 158, 198));
         jButton_Mostrar.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
         jButton_Mostrar.setForeground(new java.awt.Color(255, 255, 255));
         jButton_Mostrar.setText("Mostrar");
         jButton_Mostrar.addActionListener(this::jButton_MostrarActionPerformed);
         jPanel_Propiedades.add(jButton_Mostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 10, 260, -1));
-
-        jButton_Eliminar.setBackground(new java.awt.Color(178, 158, 198));
-        jButton_Eliminar.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
-        jButton_Eliminar.setForeground(new java.awt.Color(255, 255, 255));
-        jButton_Eliminar.setText("Eliminar");
-        jButton_Eliminar.addActionListener(this::jButton_EliminarActionPerformed);
-        jPanel_Propiedades.add(jButton_Eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 10, 260, 60));
-
-        jLabel_Id1.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
-        jLabel_Id1.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel_Id1.setText("Id Cliente:");
-        jPanel_Propiedades.add(jLabel_Id1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, 30));
-
-        jTextField_IdHistorial.setBackground(new java.awt.Color(200, 188, 211));
-        jTextField_IdHistorial.setFont(new java.awt.Font("Arial Black", 3, 14)); // NOI18N
-        jTextField_IdHistorial.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel_Propiedades.add(jTextField_IdHistorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, 100, -1));
-
-        jComboBox_IdCliente.setBackground(new java.awt.Color(200, 188, 211));
-        jPanel_Propiedades.add(jComboBox_IdCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, 100, 31));
-
-        jTextField_ApMat.setBackground(new java.awt.Color(200, 188, 211));
-        jTextField_ApMat.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
-        jTextField_ApMat.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel_Propiedades.add(jTextField_ApMat, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 90, 110, -1));
-
-        jLabel_ApMat.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
-        jLabel_ApMat.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel_ApMat.setText("Apellido Materno:");
-        jPanel_Propiedades.add(jLabel_ApMat, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 90, -1, 30));
-
-        jTextField_ApPat.setBackground(new java.awt.Color(200, 188, 211));
-        jTextField_ApPat.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
-        jTextField_ApPat.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel_Propiedades.add(jTextField_ApPat, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 90, 110, 30));
-
-        jLabel_ApPat.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
-        jLabel_ApPat.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel_ApPat.setText("Apellido Paterno:");
-        jPanel_Propiedades.add(jLabel_ApPat, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 90, -1, 30));
-
-        jLabel_SegNom.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
-        jLabel_SegNom.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel_SegNom.setText("Segundo Nombre:");
-        jPanel_Propiedades.add(jLabel_SegNom, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 90, -1, 30));
-
-        jTextField_PrimNom.setBackground(new java.awt.Color(200, 188, 211));
-        jTextField_PrimNom.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
-        jTextField_PrimNom.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel_Propiedades.add(jTextField_PrimNom, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 90, 120, 30));
-
-        jTextField_SegNom.setBackground(new java.awt.Color(200, 188, 211));
-        jTextField_SegNom.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
-        jTextField_SegNom.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel_Propiedades.add(jTextField_SegNom, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 90, 120, -1));
-
-        jLabel_PrimNom.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
-        jLabel_PrimNom.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel_PrimNom.setText("Primer Nombre:");
-        jPanel_Propiedades.add(jLabel_PrimNom, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, -1, 30));
-
-        jTextField_Hospital.setBackground(new java.awt.Color(200, 188, 211));
-        jTextField_Hospital.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
-        jTextField_Hospital.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel_Propiedades.add(jTextField_Hospital, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 50, 110, -1));
 
         jPanel1.add(jPanel_Propiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 460, 1000, -1));
 
@@ -318,15 +300,6 @@ public class FormHistorialMedico extends javax.swing.JFrame {
         jMenuItemInsertar.addActionListener(this::jMenuItemInsertarActionPerformed);
         jMenuMetodos.add(jMenuItemInsertar);
 
-        jMenuItemModificar.setBackground(new java.awt.Color(210, 193, 227));
-        jMenuItemModificar.setFont(new java.awt.Font("Pristina", 1, 18)); // NOI18N
-        jMenuItemModificar.setForeground(new java.awt.Color(255, 255, 255));
-        jMenuItemModificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Formularios/4.png"))); // NOI18N
-        jMenuItemModificar.setText("Modificar");
-        jMenuItemModificar.setOpaque(true);
-        jMenuItemModificar.addActionListener(this::jMenuItemModificarActionPerformed);
-        jMenuMetodos.add(jMenuItemModificar);
-
         jMenuItemMostrar.setBackground(new java.awt.Color(210, 193, 227));
         jMenuItemMostrar.setFont(new java.awt.Font("Pristina", 1, 18)); // NOI18N
         jMenuItemMostrar.setForeground(new java.awt.Color(255, 255, 255));
@@ -335,15 +308,6 @@ public class FormHistorialMedico extends javax.swing.JFrame {
         jMenuItemMostrar.setOpaque(true);
         jMenuItemMostrar.addActionListener(this::jMenuItemMostrarActionPerformed);
         jMenuMetodos.add(jMenuItemMostrar);
-
-        jMenuItemEliminar.setBackground(new java.awt.Color(210, 193, 227));
-        jMenuItemEliminar.setFont(new java.awt.Font("Pristina", 1, 18)); // NOI18N
-        jMenuItemEliminar.setForeground(new java.awt.Color(255, 255, 255));
-        jMenuItemEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Formularios/6.png"))); // NOI18N
-        jMenuItemEliminar.setText("Eliminar");
-        jMenuItemEliminar.setOpaque(true);
-        jMenuItemEliminar.addActionListener(this::jMenuItemEliminarActionPerformed);
-        jMenuMetodos.add(jMenuItemEliminar);
 
         jMenuItemMostrarTodo.setBackground(new java.awt.Color(210, 193, 227));
         jMenuItemMostrarTodo.setFont(new java.awt.Font("Pristina", 1, 18)); // NOI18N
@@ -385,58 +349,21 @@ public class FormHistorialMedico extends javax.swing.JFrame {
     private void jMenuItemCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCerrarActionPerformed
         this.dispose();
     }//GEN-LAST:event_jMenuItemCerrarActionPerformed
-
     private void jMenuItemInsertarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemInsertarActionPerformed
         jPanel_Propiedades.setVisible(true);
-        jButton_Modificar.setVisible(false);
-        jButton_Eliminar.setVisible(false);
         jButton_Mostrar.setVisible(false);
         jButton_Crear.setVisible(true);
         jComboBox_IdHistorial.setVisible(false);
         jTextField_IdHistorial.setVisible(true);
     }//GEN-LAST:event_jMenuItemInsertarActionPerformed
 
-    private void jMenuItemModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemModificarActionPerformed
-        jPanel_Propiedades.setVisible(true);
-        jButton_Modificar.setVisible(true);
-        jButton_Eliminar.setVisible(false);
-        jButton_Mostrar.setVisible(false);
-        jButton_Crear.setVisible(false);
-        jTextField_IdHistorial.setVisible(false);
-        jComboBox_IdHistorial.setVisible(true);
-    }//GEN-LAST:event_jMenuItemModificarActionPerformed
-
     private void jMenuItemMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemMostrarActionPerformed
         jPanel_Propiedades.setVisible(true);
-        jButton_Modificar.setVisible(false);
-        jButton_Eliminar.setVisible(false);
         jButton_Mostrar.setVisible(true);
         jButton_Crear.setVisible(false);
         jTextField_IdHistorial.setVisible(false);
         jComboBox_IdHistorial.setVisible(true);
     }//GEN-LAST:event_jMenuItemMostrarActionPerformed
-
-    private void jMenuItemEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemEliminarActionPerformed
-        jPanel_Propiedades.setVisible(true);
-        jButton_Modificar.setVisible(false);
-        jButton_Eliminar.setVisible(true);
-        jButton_Mostrar.setVisible(false);
-        jButton_Crear.setVisible(false);
-        jTextField_IdHistorial.setVisible(false);
-        jComboBox_IdHistorial.setVisible(true);
-    }//GEN-LAST:event_jMenuItemEliminarActionPerformed
-
-    private void jButton_ModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ModificarActionPerformed
-        int idCliente = Integer.parseInt(this.jComboBox_IdCliente.getSelectedItem().toString());
-        int idHistorial = Integer.parseInt(this.jComboBox_IdHistorial.getSelectedItem().toString());
-        String desc = jTextField_Descripcion.getText();
-        String fechaUltAct = jTextField_fechaUltAct.getText();
-        String hospital = jTextField_Hospital.getText();
-        String primNomb = jTextField_PrimNom.getText();
-        String segNomb = jTextField_SegNom.getText();
-        String apPat = jTextField_ApPat.getText();
-        String apMat = jTextField_ApMat.getText();
-    }//GEN-LAST:event_jButton_ModificarActionPerformed
 
     private void jButton_CrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_CrearActionPerformed
         int idCliente = Integer.parseInt(this.jComboBox_IdCliente.getSelectedItem().toString());
@@ -462,28 +389,6 @@ public class FormHistorialMedico extends javax.swing.JFrame {
         String apMat = jTextField_ApMat.getText();
     }//GEN-LAST:event_jButton_MostrarActionPerformed
 
-    private void jButton_EliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_EliminarActionPerformed
-        int idCliente = Integer.parseInt(this.jComboBox_IdCliente.getSelectedItem().toString());
-        int idHistorial = Integer.parseInt(this.jComboBox_IdHistorial.getSelectedItem().toString());
-        String desc = jTextField_Descripcion.getText();
-        String fechaUltAct = jTextField_fechaUltAct.getText();
-        String hospital = jTextField_Hospital.getText();
-        String primNomb = jTextField_PrimNom.getText();
-        String segNomb = jTextField_SegNom.getText();
-        String apPat = jTextField_ApPat.getText();
-        String apMat = jTextField_ApMat.getText();
-        
-        int opc = JOptionPane.showConfirmDialog(rootPane, "¿Estás seguro que quieres eliminar este registro?");
-        if (opc == 0) 
-        {
-            int op = JOptionPane.showConfirmDialog(rootPane, "¿De verdad estás seguro de querer eliminar el registro?");
-            if(op == 0)
-            {
-                //Eliminar
-            }
-        }
-    }//GEN-LAST:event_jButton_EliminarActionPerformed
-
     private void jMenuItemMostrarTodoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemMostrarTodoActionPerformed
         jPanel_Propiedades.setVisible(false);
     }//GEN-LAST:event_jMenuItemMostrarTodoActionPerformed
@@ -507,8 +412,6 @@ public class FormHistorialMedico extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonSiguiente;
     private javax.swing.JButton jButton_Crear;
-    private javax.swing.JButton jButton_Eliminar;
-    private javax.swing.JButton jButton_Modificar;
     private javax.swing.JButton jButton_Mostrar;
     private javax.swing.JComboBox<String> jComboBox_IdCliente;
     private javax.swing.JComboBox<String> jComboBox_IdHistorial;
@@ -517,8 +420,8 @@ public class FormHistorialMedico extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel_Descripcion;
     private javax.swing.JLabel jLabel_FechaUltAct;
     private javax.swing.JLabel jLabel_Hospital;
-    private javax.swing.JLabel jLabel_Id;
-    private javax.swing.JLabel jLabel_Id1;
+    private javax.swing.JLabel jLabel_IdCliente;
+    private javax.swing.JLabel jLabel_IdHistorial;
     private javax.swing.JLabel jLabel_Logo;
     private javax.swing.JLabel jLabel_Nombre;
     private javax.swing.JLabel jLabel_PrimNom;
@@ -528,9 +431,7 @@ public class FormHistorialMedico extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar;
     private javax.swing.JMenu jMenuInicio;
     private javax.swing.JMenuItem jMenuItemCerrar;
-    private javax.swing.JMenuItem jMenuItemEliminar;
     private javax.swing.JMenuItem jMenuItemInsertar;
-    private javax.swing.JMenuItem jMenuItemModificar;
     private javax.swing.JMenuItem jMenuItemMostrar;
     private javax.swing.JMenuItem jMenuItemMostrarTodo;
     private javax.swing.JMenuItem jMenuItemRegresar;

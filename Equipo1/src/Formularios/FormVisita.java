@@ -52,19 +52,17 @@ public class FormVisita extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jPanel_Propiedades = new javax.swing.JPanel();
+        jLabel_IdCliente = new javax.swing.JLabel();
+        jComboBox_IdCliente = new javax.swing.JComboBox<>();
         jLabel_Id = new javax.swing.JLabel();
         jComboBox_IdVisita = new javax.swing.JComboBox<>();
-        jLabel_SegNom = new javax.swing.JLabel();
-        jTextField_FechaVisita = new javax.swing.JTextField();
-        jLabel_ApPat = new javax.swing.JLabel();
-        jButton_Crear = new javax.swing.JButton();
-        jButton_Modificar = new javax.swing.JButton();
-        jButton_Mostrar = new javax.swing.JButton();
-        jButton_Eliminar = new javax.swing.JButton();
-        jLabel_Id1 = new javax.swing.JLabel();
         jTextField_IdVisita = new javax.swing.JTextField();
-        jComboBox_IdCliente = new javax.swing.JComboBox<>();
-        jTextField_Hospital = new javax.swing.JTextField();
+        jLabel_FechaVisita = new javax.swing.JLabel();
+        jTextField_FechaVisita = new javax.swing.JTextField();
+        jLabel_Duracion = new javax.swing.JLabel();
+        jTextField_Duracion = new javax.swing.JTextField();
+        jButton_Crear = new javax.swing.JButton();
+        jButton_Mostrar = new javax.swing.JButton();
         jButtonSiguiente = new javax.swing.JButton();
         jMenuBar = new javax.swing.JMenuBar();
         jMenuInicio = new javax.swing.JMenu();
@@ -72,9 +70,7 @@ public class FormVisita extends javax.swing.JFrame {
         jMenuItemCerrar = new javax.swing.JMenuItem();
         jMenuMetodos = new javax.swing.JMenu();
         jMenuItemInsertar = new javax.swing.JMenuItem();
-        jMenuItemModificar = new javax.swing.JMenuItem();
         jMenuItemMostrar = new javax.swing.JMenuItem();
-        jMenuItemEliminar = new javax.swing.JMenuItem();
         jMenuItemMostrarTodo = new javax.swing.JMenuItem();
 
         jMenu1.setText("jMenu1");
@@ -134,6 +130,14 @@ public class FormVisita extends javax.swing.JFrame {
         jPanel_Propiedades.setBackground(new java.awt.Color(232, 209, 254));
         jPanel_Propiedades.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel_IdCliente.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
+        jLabel_IdCliente.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel_IdCliente.setText("Id Cliente:");
+        jPanel_Propiedades.add(jLabel_IdCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, 30));
+
+        jComboBox_IdCliente.setBackground(new java.awt.Color(200, 188, 211));
+        jPanel_Propiedades.add(jComboBox_IdCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, 100, 31));
+
         jLabel_Id.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
         jLabel_Id.setForeground(new java.awt.Color(0, 0, 0));
         jLabel_Id.setText("Id Visita:");
@@ -142,20 +146,30 @@ public class FormVisita extends javax.swing.JFrame {
         jComboBox_IdVisita.setBackground(new java.awt.Color(200, 188, 211));
         jPanel_Propiedades.add(jComboBox_IdVisita, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, 100, 31));
 
-        jLabel_SegNom.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
-        jLabel_SegNom.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel_SegNom.setText("Fecha de la Visita:");
-        jPanel_Propiedades.add(jLabel_SegNom, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 30, -1, 30));
+        jTextField_IdVisita.setBackground(new java.awt.Color(200, 188, 211));
+        jTextField_IdVisita.setFont(new java.awt.Font("Arial Black", 3, 14)); // NOI18N
+        jTextField_IdVisita.setForeground(new java.awt.Color(51, 51, 51));
+        jPanel_Propiedades.add(jTextField_IdVisita, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, 100, -1));
+
+        jLabel_FechaVisita.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
+        jLabel_FechaVisita.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel_FechaVisita.setText("Fecha de la Visita:");
+        jPanel_Propiedades.add(jLabel_FechaVisita, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 30, -1, 30));
 
         jTextField_FechaVisita.setBackground(new java.awt.Color(200, 188, 211));
         jTextField_FechaVisita.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
         jTextField_FechaVisita.setForeground(new java.awt.Color(51, 51, 51));
         jPanel_Propiedades.add(jTextField_FechaVisita, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 30, 120, -1));
 
-        jLabel_ApPat.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
-        jLabel_ApPat.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel_ApPat.setText("Hospital:");
-        jPanel_Propiedades.add(jLabel_ApPat, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 30, -1, 30));
+        jLabel_Duracion.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
+        jLabel_Duracion.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel_Duracion.setText("Duración:");
+        jPanel_Propiedades.add(jLabel_Duracion, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 30, -1, 30));
+
+        jTextField_Duracion.setBackground(new java.awt.Color(200, 188, 211));
+        jTextField_Duracion.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
+        jTextField_Duracion.setForeground(new java.awt.Color(51, 51, 51));
+        jPanel_Propiedades.add(jTextField_Duracion, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 30, 110, -1));
 
         jButton_Crear.setBackground(new java.awt.Color(178, 158, 198));
         jButton_Crear.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
@@ -164,44 +178,12 @@ public class FormVisita extends javax.swing.JFrame {
         jButton_Crear.addActionListener(this::jButton_CrearActionPerformed);
         jPanel_Propiedades.add(jButton_Crear, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 20, 260, 60));
 
-        jButton_Modificar.setBackground(new java.awt.Color(178, 158, 198));
-        jButton_Modificar.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
-        jButton_Modificar.setForeground(new java.awt.Color(255, 255, 255));
-        jButton_Modificar.setText("Modificar");
-        jButton_Modificar.addActionListener(this::jButton_ModificarActionPerformed);
-        jPanel_Propiedades.add(jButton_Modificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 20, 260, 60));
-
         jButton_Mostrar.setBackground(new java.awt.Color(178, 158, 198));
         jButton_Mostrar.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
         jButton_Mostrar.setForeground(new java.awt.Color(255, 255, 255));
         jButton_Mostrar.setText("Mostrar");
         jButton_Mostrar.addActionListener(this::jButton_MostrarActionPerformed);
         jPanel_Propiedades.add(jButton_Mostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 20, 260, -1));
-
-        jButton_Eliminar.setBackground(new java.awt.Color(178, 158, 198));
-        jButton_Eliminar.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
-        jButton_Eliminar.setForeground(new java.awt.Color(255, 255, 255));
-        jButton_Eliminar.setText("Eliminar");
-        jButton_Eliminar.addActionListener(this::jButton_EliminarActionPerformed);
-        jPanel_Propiedades.add(jButton_Eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 20, 260, 60));
-
-        jLabel_Id1.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
-        jLabel_Id1.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel_Id1.setText("Id Cliente:");
-        jPanel_Propiedades.add(jLabel_Id1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, 30));
-
-        jTextField_IdVisita.setBackground(new java.awt.Color(200, 188, 211));
-        jTextField_IdVisita.setFont(new java.awt.Font("Arial Black", 3, 14)); // NOI18N
-        jTextField_IdVisita.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel_Propiedades.add(jTextField_IdVisita, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, 100, -1));
-
-        jComboBox_IdCliente.setBackground(new java.awt.Color(200, 188, 211));
-        jPanel_Propiedades.add(jComboBox_IdCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, 100, 31));
-
-        jTextField_Hospital.setBackground(new java.awt.Color(200, 188, 211));
-        jTextField_Hospital.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
-        jTextField_Hospital.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel_Propiedades.add(jTextField_Hospital, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 30, 110, -1));
 
         jPanel1.add(jPanel_Propiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 460, 1000, 100));
 
@@ -249,15 +231,6 @@ public class FormVisita extends javax.swing.JFrame {
         jMenuItemInsertar.addActionListener(this::jMenuItemInsertarActionPerformed);
         jMenuMetodos.add(jMenuItemInsertar);
 
-        jMenuItemModificar.setBackground(new java.awt.Color(210, 193, 227));
-        jMenuItemModificar.setFont(new java.awt.Font("Pristina", 1, 18)); // NOI18N
-        jMenuItemModificar.setForeground(new java.awt.Color(255, 255, 255));
-        jMenuItemModificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Formularios/4.png"))); // NOI18N
-        jMenuItemModificar.setText("Modificar");
-        jMenuItemModificar.setOpaque(true);
-        jMenuItemModificar.addActionListener(this::jMenuItemModificarActionPerformed);
-        jMenuMetodos.add(jMenuItemModificar);
-
         jMenuItemMostrar.setBackground(new java.awt.Color(210, 193, 227));
         jMenuItemMostrar.setFont(new java.awt.Font("Pristina", 1, 18)); // NOI18N
         jMenuItemMostrar.setForeground(new java.awt.Color(255, 255, 255));
@@ -266,15 +239,6 @@ public class FormVisita extends javax.swing.JFrame {
         jMenuItemMostrar.setOpaque(true);
         jMenuItemMostrar.addActionListener(this::jMenuItemMostrarActionPerformed);
         jMenuMetodos.add(jMenuItemMostrar);
-
-        jMenuItemEliminar.setBackground(new java.awt.Color(210, 193, 227));
-        jMenuItemEliminar.setFont(new java.awt.Font("Pristina", 1, 18)); // NOI18N
-        jMenuItemEliminar.setForeground(new java.awt.Color(255, 255, 255));
-        jMenuItemEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Formularios/6.png"))); // NOI18N
-        jMenuItemEliminar.setText("Eliminar");
-        jMenuItemEliminar.setOpaque(true);
-        jMenuItemEliminar.addActionListener(this::jMenuItemEliminarActionPerformed);
-        jMenuMetodos.add(jMenuItemEliminar);
 
         jMenuItemMostrarTodo.setBackground(new java.awt.Color(210, 193, 227));
         jMenuItemMostrarTodo.setFont(new java.awt.Font("Pristina", 1, 18)); // NOI18N
@@ -319,81 +283,33 @@ public class FormVisita extends javax.swing.JFrame {
 
     private void jMenuItemInsertarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemInsertarActionPerformed
         jPanel_Propiedades.setVisible(true);
-        jButton_Modificar.setVisible(false);
-        jButton_Eliminar.setVisible(false);
         jButton_Mostrar.setVisible(false);
         jButton_Crear.setVisible(true);
         jComboBox_IdVisita.setVisible(false);
         jTextField_IdVisita.setVisible(true);
     }//GEN-LAST:event_jMenuItemInsertarActionPerformed
 
-    private void jMenuItemModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemModificarActionPerformed
-        jPanel_Propiedades.setVisible(true);
-        jButton_Modificar.setVisible(true);
-        jButton_Eliminar.setVisible(false);
-        jButton_Mostrar.setVisible(false);
-        jButton_Crear.setVisible(false);
-        jTextField_IdVisita.setVisible(false);
-        jComboBox_IdVisita.setVisible(true);
-    }//GEN-LAST:event_jMenuItemModificarActionPerformed
-
     private void jMenuItemMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemMostrarActionPerformed
         jPanel_Propiedades.setVisible(true);
-        jButton_Modificar.setVisible(false);
-        jButton_Eliminar.setVisible(false);
         jButton_Mostrar.setVisible(true);
         jButton_Crear.setVisible(false);
         jTextField_IdVisita.setVisible(false);
         jComboBox_IdVisita.setVisible(true);
     }//GEN-LAST:event_jMenuItemMostrarActionPerformed
 
-    private void jMenuItemEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemEliminarActionPerformed
-        jPanel_Propiedades.setVisible(true);
-        jButton_Modificar.setVisible(false);
-        jButton_Eliminar.setVisible(true);
-        jButton_Mostrar.setVisible(false);
-        jButton_Crear.setVisible(false);
-        jTextField_IdVisita.setVisible(false);
-        jComboBox_IdVisita.setVisible(true);
-    }//GEN-LAST:event_jMenuItemEliminarActionPerformed
-
-    private void jButton_ModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ModificarActionPerformed
-        int idCli = Integer.parseInt(this.jComboBox_IdCliente.getSelectedItem().toString());
-        int idVis = Integer.parseInt(this.jComboBox_IdVisita.getSelectedItem().toString());
-        String fechaVis = jTextField_FechaVisita.getText();
-        String hospital = jTextField_Hospital.getText();
-    }//GEN-LAST:event_jButton_ModificarActionPerformed
-
     private void jButton_CrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_CrearActionPerformed
         int idCli = Integer.parseInt(this.jComboBox_IdCliente.getSelectedItem().toString());
         int idVis = Integer.parseInt(this.jTextField_IdVisita.getText());
         String fechaVis = jTextField_FechaVisita.getText();
-        String hospital = jTextField_Hospital.getText();
+        Double duracion = Double.parseDouble(this.jTextField_Duracion.getText());
     }//GEN-LAST:event_jButton_CrearActionPerformed
 
     private void jButton_MostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_MostrarActionPerformed
         int idCli = Integer.parseInt(this.jComboBox_IdCliente.getSelectedItem().toString());
         int idVis = Integer.parseInt(this.jComboBox_IdVisita.getSelectedItem().toString());
         String fechaVis = jTextField_FechaVisita.getText();
-        String hospital = jTextField_Hospital.getText();
+        Double duracion = Double.parseDouble(this.jTextField_Duracion.getText());
     }//GEN-LAST:event_jButton_MostrarActionPerformed
-
-    private void jButton_EliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_EliminarActionPerformed
-        int idCli = Integer.parseInt(this.jComboBox_IdCliente.getSelectedItem().toString());
-        int idVis = Integer.parseInt(this.jComboBox_IdVisita.getSelectedItem().toString());
-        String fechaVis = jTextField_FechaVisita.getText();
-        String hospital = jTextField_Hospital.getText();
-        
-        int opc = JOptionPane.showConfirmDialog(rootPane, "¿Estás seguro que quieres eliminar este registro?");
-        if (opc == 0) 
-        {
-            int op = JOptionPane.showConfirmDialog(rootPane, "¿De verdad estás seguro de querer eliminar el registro?");
-            if(op == 0)
-            {
-                //Eliminar
-            }
-        }
-    }//GEN-LAST:event_jButton_EliminarActionPerformed
 
     private void jMenuItemMostrarTodoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemMostrarTodoActionPerformed
         jPanel_Propiedades.setVisible(false);
@@ -418,24 +334,20 @@ public class FormVisita extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonSiguiente;
     private javax.swing.JButton jButton_Crear;
-    private javax.swing.JButton jButton_Eliminar;
-    private javax.swing.JButton jButton_Modificar;
     private javax.swing.JButton jButton_Mostrar;
     private javax.swing.JComboBox<String> jComboBox_IdCliente;
     private javax.swing.JComboBox<String> jComboBox_IdVisita;
-    private javax.swing.JLabel jLabel_ApPat;
+    private javax.swing.JLabel jLabel_Duracion;
+    private javax.swing.JLabel jLabel_FechaVisita;
     private javax.swing.JLabel jLabel_Id;
-    private javax.swing.JLabel jLabel_Id1;
+    private javax.swing.JLabel jLabel_IdCliente;
     private javax.swing.JLabel jLabel_Logo;
-    private javax.swing.JLabel jLabel_SegNom;
     private javax.swing.JLabel jLabel_Titulo;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar;
     private javax.swing.JMenu jMenuInicio;
     private javax.swing.JMenuItem jMenuItemCerrar;
-    private javax.swing.JMenuItem jMenuItemEliminar;
     private javax.swing.JMenuItem jMenuItemInsertar;
-    private javax.swing.JMenuItem jMenuItemModificar;
     private javax.swing.JMenuItem jMenuItemMostrar;
     private javax.swing.JMenuItem jMenuItemMostrarTodo;
     private javax.swing.JMenuItem jMenuItemRegresar;
@@ -444,8 +356,8 @@ public class FormVisita extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel_Propiedades;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
+    private javax.swing.JTextField jTextField_Duracion;
     private javax.swing.JTextField jTextField_FechaVisita;
-    private javax.swing.JTextField jTextField_Hospital;
     private javax.swing.JTextField jTextField_IdVisita;
     private java.awt.Menu menu1;
     private java.awt.Menu menu2;

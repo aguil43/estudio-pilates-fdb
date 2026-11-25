@@ -58,19 +58,19 @@ public class FormSucursal extends javax.swing.JFrame {
         jLabel_Nombre = new javax.swing.JLabel();
         jTextField_Nombre = new javax.swing.JTextField();
         jLabel_Calle = new javax.swing.JLabel();
-        jButton_Crear = new javax.swing.JButton();
-        jButton_Modificar = new javax.swing.JButton();
-        jButton_Mostrar = new javax.swing.JButton();
-        jButton_Eliminar = new javax.swing.JButton();
+        jTextField_Calle = new javax.swing.JTextField();
         jLabel_Numero = new javax.swing.JLabel();
         jTextField_Numero = new javax.swing.JTextField();
         jLabel_Colonia = new javax.swing.JLabel();
         jTextField_Colonia = new javax.swing.JTextField();
-        jTextField_Calle = new javax.swing.JTextField();
         jLabel_cp = new javax.swing.JLabel();
         jTextField_cp = new javax.swing.JTextField();
         jLabel_Ciudad = new javax.swing.JLabel();
         jTextField_Ciudad = new javax.swing.JTextField();
+        jButton_Crear = new javax.swing.JButton();
+        jButton_Modificar = new javax.swing.JButton();
+        jButton_Mostrar = new javax.swing.JButton();
+        jButton_Eliminar = new javax.swing.JButton();
         jButtonSiguiente = new javax.swing.JButton();
         jMenuBar = new javax.swing.JMenuBar();
         jMenuInicio = new javax.swing.JMenu();
@@ -167,6 +167,51 @@ public class FormSucursal extends javax.swing.JFrame {
         jLabel_Calle.setText("Calle:");
         jPanel_Propiedades.add(jLabel_Calle, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 10, -1, 30));
 
+        jTextField_Calle.setBackground(new java.awt.Color(194, 141, 177));
+        jTextField_Calle.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
+        jTextField_Calle.setForeground(new java.awt.Color(51, 51, 51));
+        jPanel_Propiedades.add(jTextField_Calle, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 10, 120, -1));
+
+        jLabel_Numero.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
+        jLabel_Numero.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel_Numero.setText("Número:");
+        jPanel_Propiedades.add(jLabel_Numero, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 50, -1, 30));
+
+        jTextField_Numero.setBackground(new java.awt.Color(194, 141, 177));
+        jTextField_Numero.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
+        jTextField_Numero.setForeground(new java.awt.Color(51, 51, 51));
+        jPanel_Propiedades.add(jTextField_Numero, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 50, 120, -1));
+
+        jLabel_Colonia.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
+        jLabel_Colonia.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel_Colonia.setText("Colonia:");
+        jPanel_Propiedades.add(jLabel_Colonia, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 50, -1, 30));
+
+        jTextField_Colonia.setBackground(new java.awt.Color(194, 141, 177));
+        jTextField_Colonia.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
+        jTextField_Colonia.setForeground(new java.awt.Color(51, 51, 51));
+        jPanel_Propiedades.add(jTextField_Colonia, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 50, 120, -1));
+
+        jLabel_cp.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
+        jLabel_cp.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel_cp.setText("Código postal:");
+        jPanel_Propiedades.add(jLabel_cp, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 90, -1, 30));
+
+        jTextField_cp.setBackground(new java.awt.Color(194, 141, 177));
+        jTextField_cp.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
+        jTextField_cp.setForeground(new java.awt.Color(51, 51, 51));
+        jPanel_Propiedades.add(jTextField_cp, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 90, 120, -1));
+
+        jLabel_Ciudad.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
+        jLabel_Ciudad.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel_Ciudad.setText("Ciudad:");
+        jPanel_Propiedades.add(jLabel_Ciudad, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 90, -1, 30));
+
+        jTextField_Ciudad.setBackground(new java.awt.Color(194, 141, 177));
+        jTextField_Ciudad.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
+        jTextField_Ciudad.setForeground(new java.awt.Color(51, 51, 51));
+        jPanel_Propiedades.add(jTextField_Ciudad, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 90, 120, -1));
+
         jButton_Crear.setBackground(new java.awt.Color(172, 115, 153));
         jButton_Crear.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
         jButton_Crear.setForeground(new java.awt.Color(255, 255, 255));
@@ -194,51 +239,6 @@ public class FormSucursal extends javax.swing.JFrame {
         jButton_Eliminar.setText("Eliminar");
         jButton_Eliminar.addActionListener(this::jButton_EliminarActionPerformed);
         jPanel_Propiedades.add(jButton_Eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 30, 260, 60));
-
-        jLabel_Numero.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
-        jLabel_Numero.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel_Numero.setText("Número:");
-        jPanel_Propiedades.add(jLabel_Numero, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 50, -1, 30));
-
-        jTextField_Numero.setBackground(new java.awt.Color(194, 141, 177));
-        jTextField_Numero.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
-        jTextField_Numero.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel_Propiedades.add(jTextField_Numero, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 50, 120, -1));
-
-        jLabel_Colonia.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
-        jLabel_Colonia.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel_Colonia.setText("Colonia:");
-        jPanel_Propiedades.add(jLabel_Colonia, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 50, -1, 30));
-
-        jTextField_Colonia.setBackground(new java.awt.Color(194, 141, 177));
-        jTextField_Colonia.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
-        jTextField_Colonia.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel_Propiedades.add(jTextField_Colonia, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 50, 120, -1));
-
-        jTextField_Calle.setBackground(new java.awt.Color(194, 141, 177));
-        jTextField_Calle.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
-        jTextField_Calle.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel_Propiedades.add(jTextField_Calle, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 10, 120, -1));
-
-        jLabel_cp.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
-        jLabel_cp.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel_cp.setText("Código postal:");
-        jPanel_Propiedades.add(jLabel_cp, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 90, -1, 30));
-
-        jTextField_cp.setBackground(new java.awt.Color(194, 141, 177));
-        jTextField_cp.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
-        jTextField_cp.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel_Propiedades.add(jTextField_cp, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 90, 120, -1));
-
-        jLabel_Ciudad.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
-        jLabel_Ciudad.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel_Ciudad.setText("Ciudad:");
-        jPanel_Propiedades.add(jLabel_Ciudad, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 90, -1, 30));
-
-        jTextField_Ciudad.setBackground(new java.awt.Color(194, 141, 177));
-        jTextField_Ciudad.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
-        jTextField_Ciudad.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel_Propiedades.add(jTextField_Ciudad, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 90, 120, -1));
 
         jPanel1.add(jPanel_Propiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 450, 1000, 120));
 
@@ -344,9 +344,9 @@ public class FormSucursal extends javax.swing.JFrame {
         int id = Integer.parseInt(this.jComboBox_Id.getSelectedItem().toString());
         String nombre = jTextField_Nombre.getText();
         String calle = jTextField_Calle.getText();
-        int num = Integer.parseInt(this.jTextField_Numero.getText());
+        String num = jTextField_Numero.getText();
         String colonia = jTextField_Colonia.getText();
-        int cp = Integer.parseInt(this.jTextField_cp.getText());
+        String cp = jTextField_cp.getText();
         String cd = jTextField_Ciudad.getText();
     }//GEN-LAST:event_jButton_ModificarActionPerformed
 
@@ -403,6 +403,7 @@ public class FormSucursal extends javax.swing.JFrame {
         jButton_Mostrar.setVisible(false);
         jButton_Crear.setVisible(true);
         jComboBox_Id.setVisible(false);
+        jTextField_Id.setVisible(true);
     }//GEN-LAST:event_jMenuItemInsertarActionPerformed
 
     private void jMenuItemModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemModificarActionPerformed

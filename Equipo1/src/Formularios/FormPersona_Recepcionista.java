@@ -54,8 +54,9 @@ public class FormPersona_Recepcionista extends javax.swing.JFrame {
         jTable1 = new javax.swing.JTable();
         jPanel_Propiedades = new javax.swing.JPanel();
         jLabel_Id = new javax.swing.JLabel();
+        jComboBox_Id = new javax.swing.JComboBox<>();
+        jLabel_Turno = new javax.swing.JLabel();
         jComboBox_Turno = new javax.swing.JComboBox<>();
-        jLabel_Telefono = new javax.swing.JLabel();
         jLabel_Correo = new javax.swing.JLabel();
         jTextField_Correo = new javax.swing.JTextField();
         jLabel_Horario = new javax.swing.JLabel();
@@ -64,7 +65,6 @@ public class FormPersona_Recepcionista extends javax.swing.JFrame {
         jButton_Modificar = new javax.swing.JButton();
         jButton_Mostrar = new javax.swing.JButton();
         jButton_Eliminar = new javax.swing.JButton();
-        jComboBox_Id = new javax.swing.JComboBox<>();
         jButtonSiguiente = new javax.swing.JButton();
         jMenuBar = new javax.swing.JMenuBar();
         jMenuInicio = new javax.swing.JMenu();
@@ -137,25 +137,28 @@ public class FormPersona_Recepcionista extends javax.swing.JFrame {
         jLabel_Id.setText("Id Persona:");
         jPanel_Propiedades.add(jLabel_Id, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, 30));
 
+        jComboBox_Id.setBackground(new java.awt.Color(197, 143, 180));
+        jPanel_Propiedades.add(jComboBox_Id, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 30, 100, 31));
+
+        jLabel_Turno.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
+        jLabel_Turno.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel_Turno.setText("Turno:");
+        jPanel_Propiedades.add(jLabel_Turno, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 30, -1, 30));
+
         jComboBox_Turno.setBackground(new java.awt.Color(197, 143, 180));
         jComboBox_Turno.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 16)); // NOI18N
         jComboBox_Turno.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Matutino", "Vespertino", "Nocturno", " " }));
         jPanel_Propiedades.add(jComboBox_Turno, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 30, 120, 31));
 
-        jLabel_Telefono.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
-        jLabel_Telefono.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel_Telefono.setText("Turno:");
-        jPanel_Propiedades.add(jLabel_Telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 30, -1, 30));
-
         jLabel_Correo.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
         jLabel_Correo.setForeground(new java.awt.Color(0, 0, 0));
         jLabel_Correo.setText("Correo:");
-        jPanel_Propiedades.add(jLabel_Correo, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 80, 60, 30));
+        jPanel_Propiedades.add(jLabel_Correo, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 80, 60, 30));
 
         jTextField_Correo.setBackground(new java.awt.Color(197, 143, 180));
         jTextField_Correo.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
         jTextField_Correo.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel_Propiedades.add(jTextField_Correo, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 80, 300, -1));
+        jPanel_Propiedades.add(jTextField_Correo, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 80, 380, -1));
 
         jLabel_Horario.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
         jLabel_Horario.setForeground(new java.awt.Color(0, 0, 0));
@@ -194,9 +197,6 @@ public class FormPersona_Recepcionista extends javax.swing.JFrame {
         jButton_Eliminar.setText("Eliminar");
         jButton_Eliminar.addActionListener(this::jButton_EliminarActionPerformed);
         jPanel_Propiedades.add(jButton_Eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 20, 260, 60));
-
-        jComboBox_Id.setBackground(new java.awt.Color(197, 143, 180));
-        jPanel_Propiedades.add(jComboBox_Id, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 30, 100, 31));
 
         jPanel1.add(jPanel_Propiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 460, 1000, 120));
 
@@ -345,27 +345,29 @@ public class FormPersona_Recepcionista extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemEliminarActionPerformed
 
     private void jButton_ModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ModificarActionPerformed
-        int id = Integer.parseInt(this.jComboBox_Turno.getSelectedItem().toString());
-
+        int id = Integer.parseInt(this.jComboBox_Id.getSelectedItem().toString());
+        String turno = jComboBox_Turno.getSelectedItem().toString();
         String correo = jTextField_Correo.getText();
         String horario = jTextField_Horario.getText();
     }//GEN-LAST:event_jButton_ModificarActionPerformed
 
     private void jButton_CrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_CrearActionPerformed
-        int id = Integer.parseInt(this.jComboBox_Turno.getSelectedItem().toString());
-
+        int id = Integer.parseInt(this.jComboBox_Id.getSelectedItem().toString());
+        String turno = jComboBox_Turno.getSelectedItem().toString();
         String correo = jTextField_Correo.getText();
         String horario = jTextField_Horario.getText();
     }//GEN-LAST:event_jButton_CrearActionPerformed
 
     private void jButton_MostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_MostrarActionPerformed
-        int id = Integer.parseInt(this.jComboBox_Turno.getSelectedItem().toString());
+        int id = Integer.parseInt(this.jComboBox_Id.getSelectedItem().toString());
+        String turno = jComboBox_Turno.getSelectedItem().toString();
         String correo = jTextField_Correo.getText();
         String horario = jTextField_Horario.getText();
     }//GEN-LAST:event_jButton_MostrarActionPerformed
 
     private void jButton_EliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_EliminarActionPerformed
-        int id = Integer.parseInt(this.jComboBox_Turno.getSelectedItem().toString());
+        int id = Integer.parseInt(this.jComboBox_Id.getSelectedItem().toString());
+        String turno = jComboBox_Turno.getSelectedItem().toString();
         String correo = jTextField_Correo.getText();
         String horario = jTextField_Horario.getText();
 
@@ -410,8 +412,8 @@ public class FormPersona_Recepcionista extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel_Horario;
     private javax.swing.JLabel jLabel_Id;
     private javax.swing.JLabel jLabel_Logo;
-    private javax.swing.JLabel jLabel_Telefono;
     private javax.swing.JLabel jLabel_Titulo;
+    private javax.swing.JLabel jLabel_Turno;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar;
     private javax.swing.JMenu jMenuInicio;
