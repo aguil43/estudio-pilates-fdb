@@ -3,18 +3,22 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/orteg/Documents/estudio-pilates-fdb/Equipo1/src/Formularios/FormVisita.java</file>
-            <file>file:/C:/Users/orteg/Documents/estudio-pilates-fdb/Equipo1/src/Formularios/FormHistorialMedico.java</file>
-            <file>file:/C:/Users/orteg/Documents/estudio-pilates-fdb/Equipo1/src/Formularios/FormReservacion.java</file>
             <file>file:/C:/Users/orteg/Documents/estudio-pilates-fdb/Equipo1/src/Formularios/FormMenu.java</file>
-            <file>file:/C:/Users/orteg/Documents/estudio-pilates-fdb/Equipo1/src/Formularios/FormSala.java</file>
             <file>file:/C:/Users/orteg/Documents/estudio-pilates-fdb/Equipo1/src/Formularios/FormMaquina.java</file>
-            <file>file:/C:/Users/orteg/Documents/estudio-pilates-fdb/Equipo1/src/Formularios/FormMantenimiento.java</file>
             <file>file:/C:/Users/orteg/Documents/estudio-pilates-fdb/Equipo1/src/Formularios/FormCertificacion.java</file>
             <file>file:/C:/Users/orteg/Documents/estudio-pilates-fdb/Equipo1/src/Formularios/FormClase.java</file>
             <file>file:/C:/Users/orteg/Documents/estudio-pilates-fdb/Equipo1/src/Formularios/FormMembresia.java</file>
             <file>file:/C:/Users/orteg/Documents/estudio-pilates-fdb/Equipo1/src/Formularios/FormPersona_Instructor.java</file>
             <file>file:/C:/Users/orteg/Documents/estudio-pilates-fdb/Equipo1/src/Formularios/FormSucursal.java</file>
+            <file>file:/C:/Users/orteg/Documents/estudio-pilates-fdb/Equipo1/src/Formularios/FormPersona.java</file>
+            <file>file:/C:/Users/orteg/Documents/estudio-pilates-fdb/Equipo1/src/Formularios/FormPersona_Cliente.java</file>
+            <file>file:/C:/Users/orteg/Documents/estudio-pilates-fdb/Equipo1/src/Formularios/FormPersona_Empleado.java</file>
+            <file>file:/C:/Users/orteg/Documents/estudio-pilates-fdb/Equipo1/src/Formularios/FormPersona_Recepcionista.java</file>
+            <file>file:/C:/Users/orteg/Documents/estudio-pilates-fdb/Equipo1/src/Formularios/FormVisita.java</file>
+            <file>file:/C:/Users/orteg/Documents/estudio-pilates-fdb/Equipo1/src/Formularios/FormHistorialMedico.java</file>
+            <file>file:/C:/Users/orteg/Documents/estudio-pilates-fdb/Equipo1/src/Formularios/FormSala.java</file>
+            <file>file:/C:/Users/orteg/Documents/estudio-pilates-fdb/Equipo1/src/Formularios/FormReservacion.java</file>
+            <file>file:/C:/Users/orteg/Documents/estudio-pilates-fdb/Equipo1/src/Formularios/FormMantenimiento.java</file>
             <file>file:/C:/Users/orteg/Documents/estudio-pilates-fdb/Equipo1/src/Formularios/FormPlayList.java</file>
             <file>file:/C:/Users/orteg/Documents/estudio-pilates-fdb/Equipo1/src/Formularios/FormSesion.java</file>
         </group>

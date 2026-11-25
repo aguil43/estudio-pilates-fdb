@@ -68,6 +68,7 @@ public class FormClase extends javax.swing.JFrame {
         jButton_Modificar = new javax.swing.JButton();
         jButton_Mostrar = new javax.swing.JButton();
         jButton_Eliminar = new javax.swing.JButton();
+        jButton_Aleatorios = new javax.swing.JButton();
         jButtonSiguiente = new javax.swing.JButton();
         jMenuBar = new javax.swing.JMenuBar();
         jMenuInicio = new javax.swing.JMenu();
@@ -110,11 +111,11 @@ public class FormClase extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Identificación", "Nombre", "Clasificación", "Horario", "id Instructor"
+                "Identificación", "Nombre", "Horario", "Id Instructor", "Clasificación"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, true, false, true
+                false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -139,20 +140,20 @@ public class FormClase extends javax.swing.JFrame {
         jTextField_IdClase.setBackground(new java.awt.Color(194, 141, 177));
         jTextField_IdClase.setFont(new java.awt.Font("Arial Black", 3, 14)); // NOI18N
         jTextField_IdClase.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel_Propiedades.add(jTextField_IdClase, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, 100, -1));
+        jPanel_Propiedades.add(jTextField_IdClase, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, 90, -1));
 
         jComboBox_IdClase.setBackground(new java.awt.Color(194, 141, 177));
-        jPanel_Propiedades.add(jComboBox_IdClase, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, 100, 31));
+        jPanel_Propiedades.add(jComboBox_IdClase, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, 90, 31));
 
         jLabel_Nombre.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
         jLabel_Nombre.setForeground(new java.awt.Color(0, 0, 0));
         jLabel_Nombre.setText("Nombre:");
-        jPanel_Propiedades.add(jLabel_Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 10, -1, 30));
+        jPanel_Propiedades.add(jLabel_Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 10, -1, 30));
 
         jTextField_Nombre.setBackground(new java.awt.Color(194, 141, 177));
         jTextField_Nombre.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
         jTextField_Nombre.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel_Propiedades.add(jTextField_Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 10, 150, -1));
+        jPanel_Propiedades.add(jTextField_Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 10, 150, -1));
 
         jLabel_IdInstructor.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
         jLabel_IdInstructor.setForeground(new java.awt.Color(0, 0, 0));
@@ -160,55 +161,62 @@ public class FormClase extends javax.swing.JFrame {
         jPanel_Propiedades.add(jLabel_IdInstructor, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, -1, 30));
 
         jComboBox_IdInst.setBackground(new java.awt.Color(194, 141, 177));
-        jPanel_Propiedades.add(jComboBox_IdInst, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 50, 100, 31));
+        jPanel_Propiedades.add(jComboBox_IdInst, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 50, 90, 31));
 
         jLabel_Horario.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
         jLabel_Horario.setForeground(new java.awt.Color(0, 0, 0));
         jLabel_Horario.setText("Horario:");
-        jPanel_Propiedades.add(jLabel_Horario, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 30, -1, 30));
+        jPanel_Propiedades.add(jLabel_Horario, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 50, -1, 30));
 
         jTextField_Horario.setBackground(new java.awt.Color(194, 141, 177));
         jTextField_Horario.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
         jTextField_Horario.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel_Propiedades.add(jTextField_Horario, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 30, 120, -1));
+        jPanel_Propiedades.add(jTextField_Horario, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 50, 150, -1));
 
         jLabel_Clasi.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
         jLabel_Clasi.setForeground(new java.awt.Color(0, 0, 0));
         jLabel_Clasi.setText("Clasificación:");
-        jPanel_Propiedades.add(jLabel_Clasi, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 50, 100, 30));
+        jPanel_Propiedades.add(jLabel_Clasi, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 30, 100, 30));
 
         jComboBox_Clasi.setBackground(new java.awt.Color(194, 141, 177));
         jComboBox_Clasi.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 16)); // NOI18N
         jComboBox_Clasi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Principiantes", "Intermedios", "Expertos", " " }));
-        jPanel_Propiedades.add(jComboBox_Clasi, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 50, 150, 31));
+        jPanel_Propiedades.add(jComboBox_Clasi, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 30, 150, 31));
 
         jButton_Crear.setBackground(new java.awt.Color(167, 95, 144));
         jButton_Crear.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
         jButton_Crear.setForeground(new java.awt.Color(255, 255, 255));
         jButton_Crear.setText("Crear");
         jButton_Crear.addActionListener(this::jButton_CrearActionPerformed);
-        jPanel_Propiedades.add(jButton_Crear, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 10, 260, 60));
+        jPanel_Propiedades.add(jButton_Crear, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 10, 220, 60));
 
         jButton_Modificar.setBackground(new java.awt.Color(167, 95, 144));
         jButton_Modificar.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
         jButton_Modificar.setForeground(new java.awt.Color(255, 255, 255));
         jButton_Modificar.setText("Modificar");
         jButton_Modificar.addActionListener(this::jButton_ModificarActionPerformed);
-        jPanel_Propiedades.add(jButton_Modificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 10, 260, 60));
+        jPanel_Propiedades.add(jButton_Modificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 10, 220, 60));
 
         jButton_Mostrar.setBackground(new java.awt.Color(167, 95, 144));
         jButton_Mostrar.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
         jButton_Mostrar.setForeground(new java.awt.Color(255, 255, 255));
         jButton_Mostrar.setText("Mostrar");
         jButton_Mostrar.addActionListener(this::jButton_MostrarActionPerformed);
-        jPanel_Propiedades.add(jButton_Mostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 10, 260, -1));
+        jPanel_Propiedades.add(jButton_Mostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 10, 220, -1));
 
         jButton_Eliminar.setBackground(new java.awt.Color(167, 95, 144));
         jButton_Eliminar.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
         jButton_Eliminar.setForeground(new java.awt.Color(255, 255, 255));
         jButton_Eliminar.setText("Eliminar");
         jButton_Eliminar.addActionListener(this::jButton_EliminarActionPerformed);
-        jPanel_Propiedades.add(jButton_Eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 10, 260, 60));
+        jPanel_Propiedades.add(jButton_Eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 10, 220, 60));
+
+        jButton_Aleatorios.setBackground(new java.awt.Color(217, 180, 205));
+        jButton_Aleatorios.setForeground(new java.awt.Color(212, 167, 212));
+        jButton_Aleatorios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Formularios/BotonAleatorio.png"))); // NOI18N
+        jButton_Aleatorios.setOpaque(true);
+        jButton_Aleatorios.addActionListener(this::jButton_AleatoriosActionPerformed);
+        jPanel_Propiedades.add(jButton_Aleatorios, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 10, 50, 60));
 
         jPanel1.add(jPanel_Propiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 470, 1000, 90));
 
@@ -417,6 +425,10 @@ public class FormClase extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jButtonSiguienteActionPerformed
 
+    private void jButton_AleatoriosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_AleatoriosActionPerformed
+        // Botón de aleatorios
+    }//GEN-LAST:event_jButton_AleatoriosActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -428,6 +440,7 @@ public class FormClase extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonSiguiente;
+    private javax.swing.JButton jButton_Aleatorios;
     private javax.swing.JButton jButton_Crear;
     private javax.swing.JButton jButton_Eliminar;
     private javax.swing.JButton jButton_Modificar;

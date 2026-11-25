@@ -74,6 +74,7 @@ public class FormReservacion extends javax.swing.JFrame {
         jComboBox_NumSala = new javax.swing.JComboBox<>();
         jButton_Crear = new javax.swing.JButton();
         jButton_Mostrar = new javax.swing.JButton();
+        jButton_Aleatorios = new javax.swing.JButton();
         jButtonSiguiente = new javax.swing.JButton();
         jMenuBar = new javax.swing.JMenuBar();
         jMenuInicio = new javax.swing.JMenu();
@@ -148,91 +149,98 @@ public class FormReservacion extends javax.swing.JFrame {
         jLabel_IdCliente.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
         jLabel_IdCliente.setForeground(new java.awt.Color(0, 0, 0));
         jLabel_IdCliente.setText("Id Cliente:");
-        jPanel_Propiedades.add(jLabel_IdCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, 30));
+        jPanel_Propiedades.add(jLabel_IdCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, 30));
 
         jComboBox_IdCliente.setBackground(new java.awt.Color(200, 188, 211));
-        jPanel_Propiedades.add(jComboBox_IdCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 20, 100, 31));
+        jPanel_Propiedades.add(jComboBox_IdCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 90, 31));
 
         jLabel_IdReserva.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
         jLabel_IdReserva.setForeground(new java.awt.Color(0, 0, 0));
         jLabel_IdReserva.setText("Id Reservación:");
-        jPanel_Propiedades.add(jLabel_IdReserva, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, 30));
+        jPanel_Propiedades.add(jLabel_IdReserva, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, -1, 30));
 
         jComboBox_IdReserva.setBackground(new java.awt.Color(200, 188, 211));
-        jPanel_Propiedades.add(jComboBox_IdReserva, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 60, 100, 31));
+        jPanel_Propiedades.add(jComboBox_IdReserva, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 90, 31));
 
         jTextField_IdReserva.setBackground(new java.awt.Color(200, 188, 211));
         jTextField_IdReserva.setFont(new java.awt.Font("Arial Black", 3, 14)); // NOI18N
         jTextField_IdReserva.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel_Propiedades.add(jTextField_IdReserva, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 60, 100, -1));
+        jPanel_Propiedades.add(jTextField_IdReserva, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 90, -1));
 
         jLabel_FechaReserva.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
         jLabel_FechaReserva.setForeground(new java.awt.Color(0, 0, 0));
         jLabel_FechaReserva.setText("Fecha de Reserva:");
-        jPanel_Propiedades.add(jLabel_FechaReserva, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 10, -1, 30));
+        jPanel_Propiedades.add(jLabel_FechaReserva, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 10, -1, 30));
 
         jTextField_FechaReserva.setBackground(new java.awt.Color(200, 188, 211));
         jTextField_FechaReserva.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
         jTextField_FechaReserva.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel_Propiedades.add(jTextField_FechaReserva, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 10, 120, -1));
+        jPanel_Propiedades.add(jTextField_FechaReserva, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 10, 120, -1));
 
         jLabel_HoraIni.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
         jLabel_HoraIni.setForeground(new java.awt.Color(0, 0, 0));
         jLabel_HoraIni.setText("Hora de Inicio:");
-        jPanel_Propiedades.add(jLabel_HoraIni, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 50, -1, 30));
+        jPanel_Propiedades.add(jLabel_HoraIni, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 50, -1, 30));
 
         jTextField_HoraIni.setBackground(new java.awt.Color(200, 188, 211));
         jTextField_HoraIni.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
         jTextField_HoraIni.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel_Propiedades.add(jTextField_HoraIni, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 50, 120, -1));
+        jPanel_Propiedades.add(jTextField_HoraIni, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 50, 120, -1));
 
         jLabel_HoraFin.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
         jLabel_HoraFin.setForeground(new java.awt.Color(0, 0, 0));
         jLabel_HoraFin.setText("Hora de Fin:");
-        jPanel_Propiedades.add(jLabel_HoraFin, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 90, -1, 30));
+        jPanel_Propiedades.add(jLabel_HoraFin, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 90, -1, 30));
 
         jTextField_HoraFin.setBackground(new java.awt.Color(200, 188, 211));
         jTextField_HoraFin.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
         jTextField_HoraFin.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel_Propiedades.add(jTextField_HoraFin, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 90, 120, -1));
+        jPanel_Propiedades.add(jTextField_HoraFin, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 90, 120, -1));
 
         jLabel_IdGeneradora.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
         jLabel_IdGeneradora.setForeground(new java.awt.Color(0, 0, 0));
         jLabel_IdGeneradora.setText("Id Generadora:");
-        jPanel_Propiedades.add(jLabel_IdGeneradora, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 10, -1, 30));
+        jPanel_Propiedades.add(jLabel_IdGeneradora, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 10, -1, 30));
 
         jComboBox_IdGeneradora.setBackground(new java.awt.Color(200, 188, 211));
-        jPanel_Propiedades.add(jComboBox_IdGeneradora, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 10, 100, 31));
+        jPanel_Propiedades.add(jComboBox_IdGeneradora, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 10, 80, 31));
 
         jLabel_IdSucursal.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
         jLabel_IdSucursal.setForeground(new java.awt.Color(0, 0, 0));
         jLabel_IdSucursal.setText("Id Sucursal:");
-        jPanel_Propiedades.add(jLabel_IdSucursal, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 50, -1, 30));
+        jPanel_Propiedades.add(jLabel_IdSucursal, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 50, -1, 30));
 
         jComboBox_IdSucursal.setBackground(new java.awt.Color(200, 188, 211));
-        jPanel_Propiedades.add(jComboBox_IdSucursal, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 50, 100, 31));
+        jPanel_Propiedades.add(jComboBox_IdSucursal, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 50, 80, 31));
 
         jLabel_NumSala.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
         jLabel_NumSala.setForeground(new java.awt.Color(0, 0, 0));
         jLabel_NumSala.setText("Número de la sala:");
-        jPanel_Propiedades.add(jLabel_NumSala, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 90, -1, 30));
+        jPanel_Propiedades.add(jLabel_NumSala, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 90, -1, 30));
 
         jComboBox_NumSala.setBackground(new java.awt.Color(200, 188, 211));
-        jPanel_Propiedades.add(jComboBox_NumSala, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 90, 100, 31));
+        jPanel_Propiedades.add(jComboBox_NumSala, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 90, 80, 31));
 
         jButton_Crear.setBackground(new java.awt.Color(178, 158, 198));
         jButton_Crear.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
         jButton_Crear.setForeground(new java.awt.Color(255, 255, 255));
         jButton_Crear.setText("Crear");
         jButton_Crear.addActionListener(this::jButton_CrearActionPerformed);
-        jPanel_Propiedades.add(jButton_Crear, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 30, 260, 60));
+        jPanel_Propiedades.add(jButton_Crear, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 30, 220, 60));
 
         jButton_Mostrar.setBackground(new java.awt.Color(178, 158, 198));
         jButton_Mostrar.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
         jButton_Mostrar.setForeground(new java.awt.Color(255, 255, 255));
         jButton_Mostrar.setText("Mostrar");
         jButton_Mostrar.addActionListener(this::jButton_MostrarActionPerformed);
-        jPanel_Propiedades.add(jButton_Mostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 30, 260, -1));
+        jPanel_Propiedades.add(jButton_Mostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 30, 220, -1));
+
+        jButton_Aleatorios.setBackground(new java.awt.Color(189, 169, 210));
+        jButton_Aleatorios.setForeground(new java.awt.Color(212, 167, 212));
+        jButton_Aleatorios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Formularios/BotonAleatorio.png"))); // NOI18N
+        jButton_Aleatorios.setOpaque(true);
+        jButton_Aleatorios.addActionListener(this::jButton_AleatoriosActionPerformed);
+        jPanel_Propiedades.add(jButton_Aleatorios, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 30, 50, 60));
 
         jPanel1.add(jPanel_Propiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 450, 1000, 130));
 
@@ -379,6 +387,10 @@ public class FormReservacion extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jButtonSiguienteActionPerformed
 
+    private void jButton_AleatoriosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_AleatoriosActionPerformed
+        // Botón de aleatorios
+    }//GEN-LAST:event_jButton_AleatoriosActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -390,6 +402,7 @@ public class FormReservacion extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonSiguiente;
+    private javax.swing.JButton jButton_Aleatorios;
     private javax.swing.JButton jButton_Crear;
     private javax.swing.JButton jButton_Mostrar;
     private javax.swing.JComboBox<String> jComboBox_IdCliente;

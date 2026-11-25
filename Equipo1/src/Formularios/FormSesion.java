@@ -63,6 +63,7 @@ public class FormSesion extends javax.swing.JFrame {
         jTextField_NumAsistentes = new javax.swing.JTextField();
         jButton_Crear = new javax.swing.JButton();
         jButton_Mostrar = new javax.swing.JButton();
+        jButton_Aleatorios = new javax.swing.JButton();
         jButtonSiguiente = new javax.swing.JButton();
         jMenuBar = new javax.swing.JMenuBar();
         jMenuInicio = new javax.swing.JMenu();
@@ -103,11 +104,11 @@ public class FormSesion extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Id Máquina", "Folio", "Fecha Mtto", "Hora Inicio", "Hora Fin"
+                "Id Clase", "Id Sesión", "Fecha de la sesión", "Número de asistentes"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
+                false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -136,7 +137,7 @@ public class FormSesion extends javax.swing.JFrame {
         jPanel_Propiedades.add(jLabel_IdClase, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, 30));
 
         jComboBox_IdClase.setBackground(new java.awt.Color(200, 188, 211));
-        jPanel_Propiedades.add(jComboBox_IdClase, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 100, 31));
+        jPanel_Propiedades.add(jComboBox_IdClase, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 90, 31));
 
         jLabel_IdSesion.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
         jLabel_IdSesion.setForeground(new java.awt.Color(0, 0, 0));
@@ -144,12 +145,12 @@ public class FormSesion extends javax.swing.JFrame {
         jPanel_Propiedades.add(jLabel_IdSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, -1, 30));
 
         jComboBox_IdSesion.setBackground(new java.awt.Color(200, 188, 211));
-        jPanel_Propiedades.add(jComboBox_IdSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 100, 31));
+        jPanel_Propiedades.add(jComboBox_IdSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 90, 31));
 
         jTextField_IdSesion.setBackground(new java.awt.Color(200, 188, 211));
         jTextField_IdSesion.setFont(new java.awt.Font("Arial Black", 3, 14)); // NOI18N
         jTextField_IdSesion.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel_Propiedades.add(jTextField_IdSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 100, -1));
+        jPanel_Propiedades.add(jTextField_IdSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 90, -1));
 
         jLabel_FechaSesion.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
         jLabel_FechaSesion.setForeground(new java.awt.Color(0, 0, 0));
@@ -169,21 +170,28 @@ public class FormSesion extends javax.swing.JFrame {
         jTextField_NumAsistentes.setBackground(new java.awt.Color(200, 188, 211));
         jTextField_NumAsistentes.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
         jTextField_NumAsistentes.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel_Propiedades.add(jTextField_NumAsistentes, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 30, 70, -1));
+        jPanel_Propiedades.add(jTextField_NumAsistentes, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 30, 70, -1));
 
         jButton_Crear.setBackground(new java.awt.Color(178, 158, 198));
         jButton_Crear.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
         jButton_Crear.setForeground(new java.awt.Color(255, 255, 255));
         jButton_Crear.setText("Crear");
         jButton_Crear.addActionListener(this::jButton_CrearActionPerformed);
-        jPanel_Propiedades.add(jButton_Crear, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 10, 260, 60));
+        jPanel_Propiedades.add(jButton_Crear, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 10, 220, 60));
 
         jButton_Mostrar.setBackground(new java.awt.Color(178, 158, 198));
         jButton_Mostrar.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
         jButton_Mostrar.setForeground(new java.awt.Color(255, 255, 255));
         jButton_Mostrar.setText("Mostrar");
         jButton_Mostrar.addActionListener(this::jButton_MostrarActionPerformed);
-        jPanel_Propiedades.add(jButton_Mostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 10, 260, -1));
+        jPanel_Propiedades.add(jButton_Mostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 10, 220, -1));
+
+        jButton_Aleatorios.setBackground(new java.awt.Color(189, 169, 210));
+        jButton_Aleatorios.setForeground(new java.awt.Color(212, 167, 212));
+        jButton_Aleatorios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Formularios/BotonAleatorio.png"))); // NOI18N
+        jButton_Aleatorios.setOpaque(true);
+        jButton_Aleatorios.addActionListener(this::jButton_AleatoriosActionPerformed);
+        jPanel_Propiedades.add(jButton_Aleatorios, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 10, 50, 60));
 
         jPanel1.add(jPanel_Propiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 470, 1000, 100));
 
@@ -257,7 +265,7 @@ public class FormSesion extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1151, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1150, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -319,6 +327,10 @@ public class FormSesion extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jButtonSiguienteActionPerformed
 
+    private void jButton_AleatoriosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_AleatoriosActionPerformed
+        // Botón de aleatorios
+    }//GEN-LAST:event_jButton_AleatoriosActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -330,6 +342,7 @@ public class FormSesion extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonSiguiente;
+    private javax.swing.JButton jButton_Aleatorios;
     private javax.swing.JButton jButton_Crear;
     private javax.swing.JButton jButton_Mostrar;
     private javax.swing.JComboBox<String> jComboBox_IdClase;

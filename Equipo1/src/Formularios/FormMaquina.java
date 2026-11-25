@@ -67,6 +67,7 @@ public class FormMaquina extends javax.swing.JFrame {
         jButton_Modificar = new javax.swing.JButton();
         jButton_Mostrar = new javax.swing.JButton();
         jButton_Eliminar = new javax.swing.JButton();
+        jButton_Aleatorios = new javax.swing.JButton();
         jButtonSiguiente = new javax.swing.JButton();
         jLabel_Titulo = new javax.swing.JLabel();
         jMenuBar = new javax.swing.JMenuBar();
@@ -173,35 +174,42 @@ public class FormMaquina extends javax.swing.JFrame {
         jPanel_Propiedades.add(jLabel_numero, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 30, -1, 30));
 
         jComboBox_NumSala.setBackground(new java.awt.Color(194, 141, 177));
-        jPanel_Propiedades.add(jComboBox_NumSala, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 30, 100, 31));
+        jPanel_Propiedades.add(jComboBox_NumSala, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 30, 100, 31));
 
         jButton_Crear.setBackground(new java.awt.Color(167, 95, 144));
         jButton_Crear.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
         jButton_Crear.setForeground(new java.awt.Color(255, 255, 255));
         jButton_Crear.setText("Crear");
         jButton_Crear.addActionListener(this::jButton_CrearActionPerformed);
-        jPanel_Propiedades.add(jButton_Crear, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 10, 260, 60));
+        jPanel_Propiedades.add(jButton_Crear, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 10, 220, 60));
 
         jButton_Modificar.setBackground(new java.awt.Color(167, 95, 144));
         jButton_Modificar.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
         jButton_Modificar.setForeground(new java.awt.Color(255, 255, 255));
         jButton_Modificar.setText("Modificar");
         jButton_Modificar.addActionListener(this::jButton_ModificarActionPerformed);
-        jPanel_Propiedades.add(jButton_Modificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 10, 260, 60));
+        jPanel_Propiedades.add(jButton_Modificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(783, 10, -1, 60));
 
         jButton_Mostrar.setBackground(new java.awt.Color(167, 95, 144));
         jButton_Mostrar.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
         jButton_Mostrar.setForeground(new java.awt.Color(255, 255, 255));
         jButton_Mostrar.setText("Mostrar");
         jButton_Mostrar.addActionListener(this::jButton_MostrarActionPerformed);
-        jPanel_Propiedades.add(jButton_Mostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 10, 260, -1));
+        jPanel_Propiedades.add(jButton_Mostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 10, 220, -1));
 
         jButton_Eliminar.setBackground(new java.awt.Color(167, 95, 144));
         jButton_Eliminar.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
         jButton_Eliminar.setForeground(new java.awt.Color(255, 255, 255));
         jButton_Eliminar.setText("Eliminar");
         jButton_Eliminar.addActionListener(this::jButton_EliminarActionPerformed);
-        jPanel_Propiedades.add(jButton_Eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 10, 260, 60));
+        jPanel_Propiedades.add(jButton_Eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 10, 220, 60));
+
+        jButton_Aleatorios.setBackground(new java.awt.Color(217, 180, 205));
+        jButton_Aleatorios.setForeground(new java.awt.Color(212, 167, 212));
+        jButton_Aleatorios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Formularios/BotonAleatorio.png"))); // NOI18N
+        jButton_Aleatorios.setOpaque(true);
+        jButton_Aleatorios.addActionListener(this::jButton_AleatoriosActionPerformed);
+        jPanel_Propiedades.add(jButton_Aleatorios, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 10, 50, 60));
 
         jPanel1.add(jPanel_Propiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 470, 1000, -1));
 
@@ -415,6 +423,10 @@ public class FormMaquina extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jButtonSiguienteActionPerformed
 
+    private void jButton_AleatoriosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_AleatoriosActionPerformed
+        // Botón de aleatorios
+    }//GEN-LAST:event_jButton_AleatoriosActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -426,6 +438,7 @@ public class FormMaquina extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonSiguiente;
+    private javax.swing.JButton jButton_Aleatorios;
     private javax.swing.JButton jButton_Crear;
     private javax.swing.JButton jButton_Eliminar;
     private javax.swing.JButton jButton_Modificar;

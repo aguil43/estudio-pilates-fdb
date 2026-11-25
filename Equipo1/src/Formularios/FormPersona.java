@@ -66,6 +66,7 @@ public class FormPersona extends javax.swing.JFrame {
         jButton_Modificar = new javax.swing.JButton();
         jButton_Mostrar = new javax.swing.JButton();
         jButton_Eliminar = new javax.swing.JButton();
+        jButton_Aleatorios = new javax.swing.JButton();
         jButtonSiguiente = new javax.swing.JButton();
         jMenuBar = new javax.swing.JMenuBar();
         jMenuInicio = new javax.swing.JMenu();
@@ -98,7 +99,7 @@ public class FormPersona extends javax.swing.JFrame {
         jLabel_Titulo.setFont(new java.awt.Font("Script MT Bold", 3, 75)); // NOI18N
         jLabel_Titulo.setForeground(new java.awt.Color(153, 0, 102));
         jLabel_Titulo.setText("Persona");
-        jPanel1.add(jLabel_Titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 30, -1, 60));
+        jPanel1.add(jLabel_Titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 30, -1, 60));
 
         jTable1.setBackground(new java.awt.Color(232, 175, 212));
         jTable1.setFont(new java.awt.Font("Nirmala UI", 1, 14)); // NOI18N
@@ -137,78 +138,85 @@ public class FormPersona extends javax.swing.JFrame {
         jTextField_Id.setBackground(new java.awt.Color(194, 141, 177));
         jTextField_Id.setFont(new java.awt.Font("Arial Black", 3, 14)); // NOI18N
         jTextField_Id.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel_Propiedades.add(jTextField_Id, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, 100, -1));
+        jPanel_Propiedades.add(jTextField_Id, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, 80, -1));
 
         jComboBox_Id.setBackground(new java.awt.Color(194, 141, 177));
-        jPanel_Propiedades.add(jComboBox_Id, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, 100, 31));
+        jPanel_Propiedades.add(jComboBox_Id, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, 80, 31));
 
         jLabel_PrimNom.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
         jLabel_PrimNom.setForeground(new java.awt.Color(0, 0, 0));
         jLabel_PrimNom.setText("Primer Nombre:");
-        jPanel_Propiedades.add(jLabel_PrimNom, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 10, -1, 30));
+        jPanel_Propiedades.add(jLabel_PrimNom, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 10, -1, 30));
 
         jTextField_PrimNom.setBackground(new java.awt.Color(194, 141, 177));
         jTextField_PrimNom.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
         jTextField_PrimNom.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel_Propiedades.add(jTextField_PrimNom, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 10, 120, -1));
+        jPanel_Propiedades.add(jTextField_PrimNom, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 10, 120, -1));
 
         jLabel_SegNom.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
         jLabel_SegNom.setForeground(new java.awt.Color(0, 0, 0));
         jLabel_SegNom.setText("Segundo Nombre:");
-        jPanel_Propiedades.add(jLabel_SegNom, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 10, -1, 30));
+        jPanel_Propiedades.add(jLabel_SegNom, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 10, -1, 30));
 
         jTextField_SegNom.setBackground(new java.awt.Color(194, 141, 177));
         jTextField_SegNom.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
         jTextField_SegNom.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel_Propiedades.add(jTextField_SegNom, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 10, 120, -1));
+        jPanel_Propiedades.add(jTextField_SegNom, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 10, 120, -1));
 
         jLabel_ApPat.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
         jLabel_ApPat.setForeground(new java.awt.Color(0, 0, 0));
         jLabel_ApPat.setText("Apellido Paterno:");
-        jPanel_Propiedades.add(jLabel_ApPat, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 50, -1, 30));
+        jPanel_Propiedades.add(jLabel_ApPat, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 50, -1, 30));
 
         jTextField_ApPat.setBackground(new java.awt.Color(194, 141, 177));
         jTextField_ApPat.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
         jTextField_ApPat.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel_Propiedades.add(jTextField_ApPat, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 50, 120, -1));
+        jPanel_Propiedades.add(jTextField_ApPat, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 50, 120, -1));
 
         jLabel_ApMat.setFont(new java.awt.Font("Rockwell", 2, 16)); // NOI18N
         jLabel_ApMat.setForeground(new java.awt.Color(0, 0, 0));
         jLabel_ApMat.setText("Apellido Materno:");
-        jPanel_Propiedades.add(jLabel_ApMat, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 50, -1, 30));
+        jPanel_Propiedades.add(jLabel_ApMat, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 50, -1, 30));
 
         jTextField_ApMat.setBackground(new java.awt.Color(194, 141, 177));
         jTextField_ApMat.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
         jTextField_ApMat.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel_Propiedades.add(jTextField_ApMat, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 50, 120, -1));
+        jPanel_Propiedades.add(jTextField_ApMat, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 50, 120, -1));
 
         jButton_Crear.setBackground(new java.awt.Color(172, 115, 153));
         jButton_Crear.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
         jButton_Crear.setForeground(new java.awt.Color(255, 255, 255));
         jButton_Crear.setText("Crear");
         jButton_Crear.addActionListener(this::jButton_CrearActionPerformed);
-        jPanel_Propiedades.add(jButton_Crear, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 10, 260, 60));
+        jPanel_Propiedades.add(jButton_Crear, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 10, 220, 60));
 
         jButton_Modificar.setBackground(new java.awt.Color(172, 115, 153));
         jButton_Modificar.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
         jButton_Modificar.setForeground(new java.awt.Color(255, 255, 255));
         jButton_Modificar.setText("Modificar");
         jButton_Modificar.addActionListener(this::jButton_ModificarActionPerformed);
-        jPanel_Propiedades.add(jButton_Modificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 10, 260, 60));
+        jPanel_Propiedades.add(jButton_Modificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 10, 220, 60));
 
         jButton_Mostrar.setBackground(new java.awt.Color(172, 115, 153));
         jButton_Mostrar.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
         jButton_Mostrar.setForeground(new java.awt.Color(255, 255, 255));
         jButton_Mostrar.setText("Mostrar");
         jButton_Mostrar.addActionListener(this::jButton_MostrarActionPerformed);
-        jPanel_Propiedades.add(jButton_Mostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 10, 260, -1));
+        jPanel_Propiedades.add(jButton_Mostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 10, 220, -1));
 
         jButton_Eliminar.setBackground(new java.awt.Color(172, 115, 153));
         jButton_Eliminar.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
         jButton_Eliminar.setForeground(new java.awt.Color(255, 255, 255));
         jButton_Eliminar.setText("Eliminar");
         jButton_Eliminar.addActionListener(this::jButton_EliminarActionPerformed);
-        jPanel_Propiedades.add(jButton_Eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 10, 260, 60));
+        jPanel_Propiedades.add(jButton_Eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 10, 220, 60));
+
+        jButton_Aleatorios.setBackground(new java.awt.Color(217, 180, 205));
+        jButton_Aleatorios.setForeground(new java.awt.Color(212, 167, 212));
+        jButton_Aleatorios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Formularios/BotonAleatorio.png"))); // NOI18N
+        jButton_Aleatorios.setOpaque(true);
+        jButton_Aleatorios.addActionListener(this::jButton_AleatoriosActionPerformed);
+        jPanel_Propiedades.add(jButton_Aleatorios, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 10, 50, 60));
 
         jPanel1.add(jPanel_Propiedades, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 470, 1000, 90));
 
@@ -417,6 +425,10 @@ public class FormPersona extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jButtonSiguienteActionPerformed
 
+    private void jButton_AleatoriosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_AleatoriosActionPerformed
+        // Botón de aleatorios
+    }//GEN-LAST:event_jButton_AleatoriosActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -428,6 +440,7 @@ public class FormPersona extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonSiguiente;
+    private javax.swing.JButton jButton_Aleatorios;
     private javax.swing.JButton jButton_Crear;
     private javax.swing.JButton jButton_Eliminar;
     private javax.swing.JButton jButton_Modificar;
