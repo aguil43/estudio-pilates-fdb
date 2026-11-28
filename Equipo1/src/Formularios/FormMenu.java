@@ -37,7 +37,6 @@ public class FormMenu extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel_Logo = new javax.swing.JLabel();
         jLabel_Titulo = new javax.swing.JLabel();
-        jButton_Persona = new javax.swing.JButton();
         jLabel_Fondo1 = new javax.swing.JLabel();
         jLabel_Select = new javax.swing.JLabel();
         jButton_Membresia = new javax.swing.JButton();
@@ -52,7 +51,6 @@ public class FormMenu extends javax.swing.JFrame {
         jLabel_Fondo6 = new javax.swing.JLabel();
         jButton_Cliente = new javax.swing.JButton();
         jLabel_Fondo7 = new javax.swing.JLabel();
-        jButton_Empleado = new javax.swing.JButton();
         jLabel_Fondo8 = new javax.swing.JLabel();
         jButton_Instructor = new javax.swing.JButton();
         jLabel_Fondo9 = new javax.swing.JLabel();
@@ -89,13 +87,6 @@ public class FormMenu extends javax.swing.JFrame {
         jLabel_Titulo.setForeground(new java.awt.Color(102, 0, 51));
         jLabel_Titulo.setText("Estudio de Pilates");
         jPanel1.add(jLabel_Titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 50, -1, 65));
-
-        jButton_Persona.setBackground(new java.awt.Color(167, 95, 144));
-        jButton_Persona.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 18)); // NOI18N
-        jButton_Persona.setForeground(new java.awt.Color(255, 255, 255));
-        jButton_Persona.setText("PERSONA");
-        jButton_Persona.addActionListener(this::jButton_PersonaActionPerformed);
-        jPanel1.add(jButton_Persona, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, 140, 40));
 
         jLabel_Fondo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Formularios/Boton.png"))); // NOI18N
         jPanel1.add(jLabel_Fondo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, -1, 60));
@@ -164,13 +155,6 @@ public class FormMenu extends javax.swing.JFrame {
 
         jLabel_Fondo7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Formularios/Boton.png"))); // NOI18N
         jPanel1.add(jLabel_Fondo7, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 260, -1, 60));
-
-        jButton_Empleado.setBackground(new java.awt.Color(167, 95, 144));
-        jButton_Empleado.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 18)); // NOI18N
-        jButton_Empleado.setForeground(new java.awt.Color(255, 255, 255));
-        jButton_Empleado.setText("EMPLEADO");
-        jButton_Empleado.addActionListener(this::jButton_EmpleadoActionPerformed);
-        jPanel1.add(jButton_Empleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 270, 140, 40));
 
         jLabel_Fondo8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Formularios/Boton.png"))); // NOI18N
         jPanel1.add(jLabel_Fondo8, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 260, -1, 60));
@@ -284,13 +268,6 @@ public class FormMenu extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jButtonCerrarActionPerformed
 
-    private void jButton_PersonaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_PersonaActionPerformed
-        FormPersona persona = new FormPersona();
-        persona.setVisible(true);
-        
-        this.dispose();
-    }//GEN-LAST:event_jButton_PersonaActionPerformed
-
     private void jButton_MembresiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_MembresiaActionPerformed
         FormMembresia membresia = new FormMembresia();
         membresia.setVisible(true);
@@ -332,13 +309,6 @@ public class FormMenu extends javax.swing.JFrame {
         
         this.dispose();
     }//GEN-LAST:event_jButton_ClienteActionPerformed
-
-    private void jButton_EmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_EmpleadoActionPerformed
-        FormPersona_Empleado empleado = new FormPersona_Empleado();
-        empleado.setVisible(true);
-        
-        this.dispose();
-    }//GEN-LAST:event_jButton_EmpleadoActionPerformed
 
     private void jButton_InstructorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_InstructorActionPerformed
         FormPersona_Instructor instructor = new FormPersona_Instructor();
@@ -416,13 +386,11 @@ public class FormMenu extends javax.swing.JFrame {
     private javax.swing.JButton jButton_Certificacion;
     private javax.swing.JButton jButton_Clase;
     private javax.swing.JButton jButton_Cliente;
-    private javax.swing.JButton jButton_Empleado;
     private javax.swing.JButton jButton_Historial;
     private javax.swing.JButton jButton_Instructor;
     private javax.swing.JButton jButton_Maquina;
     private javax.swing.JButton jButton_Membresia;
     private javax.swing.JButton jButton_Mtto;
-    private javax.swing.JButton jButton_Persona;
     private javax.swing.JButton jButton_Playlist;
     private javax.swing.JButton jButton_Recepcionista;
     private javax.swing.JButton jButton_Reservacion;
